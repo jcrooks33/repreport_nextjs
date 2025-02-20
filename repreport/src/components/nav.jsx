@@ -19,6 +19,9 @@ export default function Navbar() {
         <Link href="/" className={styles.linkItem}>
           Home
         </Link>
+        <Link href="/bills" className={styles.linkItem}>
+          Bills
+        </Link>
         {/* External links remain as plain anchor tags */}
         <a
           href="https://www.house.gov/representatives/find-your-representative"
