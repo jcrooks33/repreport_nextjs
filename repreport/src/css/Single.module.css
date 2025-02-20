@@ -1,0 +1,10 @@
+/* 2) In your stylesheet, add this media query to adjust padding & iframe height on mobile */
+@media (max-width: 768px) {
+    .singleNewsletter {
+      padding: 1rem;      /* Less padding on mobile */
+    }
+    .newsletterFrame {
+      height: 60vh;       /* Shorter iframe height so it fits better on small screens */
+    }
+  }
+  

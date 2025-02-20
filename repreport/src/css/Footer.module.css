@@ -1,0 +1,57 @@
+.footer {
+    padding: 0; /* Remove padding */
+    margin: 0;
+    background: linear-gradient(135deg, #1e5631, #2e8b57); /* Mimic Morning Brew's gradient */    
+    color: black; /* White text */
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+}
+
+.footerContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+    padding: 0 20px;
+}
+
+.p {
+    margin: 0;
+    font-size: 14px;
+    text-align: center;
+}
+
+.socialLinks {
+    display: flex;
+    gap: 15px; /* Space between icons */
+}
+
+.icon {
+    font-size: 20px; /* Size of the icons */
+    color: white; /* Icon color */
+    transition: color 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+}
+
+.icon:hover {
+    color: #007BFF; /* Highlight color on hover */
+    transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+/* --- FOOTER --- */
+@media (max-width: 768px) {
+    .footerContent {
+      flex-direction: column;      /* Stack items vertically */
+      align-items: center;         /* Center them */
+      gap: 10px;                   /* Spacing between footer text & icons */
+    }
+  
+    .p {
+      margin-bottom: 10px;         /* Space below the text on mobile */
+    }
+  }

@@ -1,0 +1,70 @@
+/* Styling the navbar container */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Vertically center content */
+  padding: 10px 70px;
+  background-color: #ffffff; /* White background */
+  font-family: 'Inter', sans-serif;
+  height: 4vh; /* Adjust navbar height */
+}
+
+/* Styling the logo container */
+.logo {
+  display: flex;
+  align-items: center; /* Align image and text vertically */
+  gap: 10px; /* Space between the logo and text */
+}
+
+/* Styling the logo image */
+.img {
+  height: 40px; /* Set a reasonable height for the logo */
+  width: auto; /* Maintain aspect ratio */
+}
+
+/* Styling the individual links */
+.links {
+  display: flex;
+  gap: 30px; /* Increase spacing between links */
+}
+
+.links h1 {
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0;
+  color: #000; /* Black text for links */
+  cursor: pointer;
+  transition: color 0.3s ease; /* Smooth hover effect */
+}
+.linkItem:link,
+.linkItem:visited {
+  color: black;          /* or your desired color */
+  text-decoration: none;
+}
+
+.linkItem:hover,
+.linkItem:active {
+  text-decoration: underline;
+  color:  #007BFF;          /* or your desired hover color */
+}
+
+/* --- NAVBAR --- */
+@media (max-width: 768px) {
+  .nav {
+    flex-direction: column;       /* Stack items vertically */
+    height: auto;                /* Let content define height */
+    padding: 10px 30px;          /* Reduce horizontal padding on mobile */
+  }
+  
+  .logo {
+    margin-bottom: 10px;         /* Space between logo and links on mobile */
+  }
+
+  .links {
+    justify-content: center;     /* Center link group */
+  }
+
+  .links h1 {
+    font-size: 14px;            /* Slightly smaller text */
+  }
+}

@@ -1,0 +1,153 @@
+/* Background for the entire section */
+.body {
+    background: linear-gradient(135deg, #1e5631, #2e8b57); /* Mimic Morning Brew's gradient */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 20px;
+    color: white;
+    height: 25vh;
+    position: relative; /* Enable layering for the overlay text */
+}
+/* Subtle design overlay (large rotated text or shapes) */
+.body::before {
+    content: "REP"; /* Replace with desired text */
+    position: absolute;
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%) rotate(15deg); /* Center and rotate 45 degrees */
+    font-size: 800px; /* Very large font for a bolder effect */
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.05); /* Very light, semi-transparent white */
+    z-index: 0; /* Behind all other content */
+    pointer-events: none; /* Prevent interaction with this layer */
+}
+/* Text container */
+.text {
+    flex: 1;
+    padding-left: 10vw; /* Adjust horizontal padding */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start; /* Align text to the left */
+    max-width: 600px; /* Limit the text width for readability */
+}
+
+/* Main headline (Get in the Know) */
+.text p:first-child {
+    font-size: 48px; /* Larger font size for the headline */
+    font-weight: bold; /* Bold for emphasis */
+    margin: 0 0 20px; /* Space below the headline */
+    text-align: left; /* Ensure left alignment */
+    line-height: 1.2; /* Adjust line height for a clean look */
+}
+
+/* Secondary paragraph */
+.text p:last-child {
+    font-size: 20px; /* Slightly larger font size for better readability */
+    font-weight: 400; /* Regular weight */
+    margin: 0; /* No extra margin */
+    line-height: 1.6; /* Increase line height for readability */
+    text-align: left;
+    color: #f4f4f4; /* Softer white for the secondary text */
+}
+
+
+/* Form container */
+.form {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 5vw;
+}
+
+.formElement {
+    display: grid;
+    gap: 5px; /* Space between form elements */
+    max-width: 400px;
+    width: 100%;
+}
+.input {
+    width: 100%; /* Consistent width for all inputs and dropdowns */
+    height: 50px; /* Uniform height */
+    padding: 10px; /* Inner padding */
+    margin-bottom: 0px; /* Space between elements */
+    border: 1px solid #ccc; /* Consistent border styling */
+    border-radius: 8px; /* Consistent rounded corners */
+    font-size: 16px; /* Font size */
+    box-sizing: border-box; /* Ensure padding and borders are included in the width */
+    outline: none;
+    appearance: none;
+}
+
+
+
+/* Optional: Add a consistent focus style */
+.input:focus {
+    border-color: #007BFF; /* Highlighted border on focus */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3); /* Subtle glow */
+}
+
+/* Button styling for consistency */
+.button {
+    width: 100%; /* Match width of other form elements */
+    height: 50px;
+    background-color: #222;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    z-index: 0;
+    position: relative;
+}
+
+.button:hover {
+    background-color: #333;
+    transform: scale(1.02);
+}
+
+/* Small text below the button */
+.smallText {
+    font-size: 12px; /* Smaller font size */
+    color: white; /* Light gray text */
+    text-align: center;
+    margin-top: 10px; /* Add some space above the text */
+    line-height: 1.5; /* Improve readability */
+}
+
+/* Styling for the link */
+.link {
+    color: white; /* Blue color for the link */
+    text-decoration: none; /* Remove underline by default */
+    font-weight: 500; /* Slightly bold for emphasis */
+    text-decoration: underline;
+}
+/* Add this media query at the bottom (or near the bottom) of your CSS file */
+@media (max-width: 768px) {
+    .body {
+      flex-direction: column;    /* Stack text & form vertically on mobile */
+      height: auto;             /* Let content determine height */
+    }
+  
+    .text {
+      padding-left: 0;          /* Remove large left padding on mobile */
+      margin-bottom: 20px;      /* Space between text block & form */
+      align-items: center;      /* Center text horizontally */
+      text-align: center;
+      max-width: none;          /* Remove max-width constraint so it fits */
+    }
+  
+    .form {
+      padding-right: 0;         /* Remove right padding on mobile */
+      justify-content: center; 
+      align-items: center;
+    }
+  }
+  
+
