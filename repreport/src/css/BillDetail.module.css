@@ -1,4 +1,7 @@
+/* src/css/BillDetail.module.css */
+
 .container {
+  max-width: 1200px;
   margin: 0 auto;
   padding: 2rem;
 }
@@ -9,6 +12,7 @@
 }
 
 .container ul {
+  list-style: disc;
   margin: 1rem 0;
   padding-left: 1.5rem;
 }
@@ -18,21 +22,33 @@
   line-height: 1.6;
 }
 
+/* Two-Column Layout */
 .twoColumn {
   display: flex;
   gap: 2rem;
   margin-top: 2rem;
 }
 
+/* 
+  Each column is a flex container so we can center items horizontally.
+  flex-direction: column ensures children stack vertically within each column.
+*/
 .left,
 .right {
   flex: 1;
-  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* center horizontally */
 }
 
+/* Table Styling */
 .table {
-  width: 100%;
+  width: 90%; /* or 100%, if you prefer */
   border-collapse: collapse;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 2rem; /* space below the table */
 }
 
 .table th,
@@ -42,6 +58,20 @@
   text-align: left;
 }
 
+.table th {
+  background-color: #f7f7f7;
+}
+
+/* Tweet Block Styling */
 .tweet {
+  width: 90%; /* ensure the tweet block is centered within its column */
+  border: 1px solid #ddd;
+  padding: 1rem;
+  border-radius: 5px;
+  transition: box-shadow 0.2s ease;
   margin-bottom: 1.5rem;
+}
+
+.tweet:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }

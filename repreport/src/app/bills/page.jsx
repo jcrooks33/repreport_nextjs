@@ -12,7 +12,6 @@ export default function BillsPage() {
           <li key={bill.slug} className={styles.billItem}>
             <Link href={`/bills/${bill.slug}`} className={styles.billLink}>
             <h2>{bill.title}</h2>
-            <p>{bill.description}</p>
             </Link>
           </li>
         ))}

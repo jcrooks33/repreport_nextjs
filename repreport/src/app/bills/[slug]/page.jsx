@@ -58,8 +58,6 @@ export default function BillDetailPage({ params }) {
           <li key={idx}>{bp}</li>
         ))}
       </ul>
-      <p>{bill.pork}</p>
-
       {/* Two-Column Layout */}
       <div className={styles.twoColumn}>
         {/* Left Column: CSV table */}
