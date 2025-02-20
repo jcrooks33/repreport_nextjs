@@ -1,12 +1,12 @@
+// src/app/bills/[slug]/page.jsx
 import fs from 'fs';
 import path from 'path';
 import React from 'react';
-import { billsData } from '@/data/billsData';
 import { notFound } from 'next/navigation';
-import styles from '@/css/BillDetail.module.css';
-import { Tweet } from 'react-tweet'; // This package is assumed to support SSR
+import { billsData } from '@/data/billsData';
+import BillDetailClient from '../../../components/BillDetailClient' // <-- Client component
 
-// Simple CSV parser: assumes first line contains comma-separated headers.
+// Parse CSV
 function parseCSV(csvString) {
   const lines = csvString.trim().split('\n');
   const headers = lines[0].split(',').map((h) => h.trim());
@@ -28,7 +28,6 @@ function extractTweetId(embedHtml) {
 }
 
 export async function generateStaticParams() {
-  // Pre-generate pages for all bills
   return billsData.map((bill) => ({ slug: bill.slug }));
 }
 
@@ -39,7 +38,7 @@ export default function BillDetailPage({ params }) {
     notFound();
   }
 
-  // Load CSV file and parse it into table data.
+  // --- Parse the CSV server-side ---
   const csvPath = path.join(process.cwd(), 'public', bill.csv);
   let tableData = null;
   try {
@@ -49,57 +48,18 @@ export default function BillDetailPage({ params }) {
     tableData = { error: 'Error loading CSV data' };
   }
 
-  return (
-    <div className={styles.container}>
-      {/* Header Section: Title, bullet points, and pork text */}
-      <h1>{bill.title}</h1>
-      <ul>
-        {bill.bps.map((bp, idx) => (
-          <li key={idx}>{bp}</li>
-        ))}
-      </ul>
-      {/* Two-Column Layout */}
-      <div className={styles.twoColumn}>
-        {/* Left Column: CSV table */}
-        <div className={styles.left}>
-          {tableData.error ? (
-            <p>{tableData.error}</p>
-          ) : (
-            <table className={styles.table}>
-              <thead>
-                <tr>
-                  {tableData.headers.map((header, idx) => (
-                    <th key={idx}>{header}</th>
-                  ))}
-                </tr>
-              </thead>
-              <tbody>
-                {tableData.data.map((row, rowIndex) => (
-                  <tr key={rowIndex}>
-                    {tableData.headers.map((header, cellIndex) => (
-                      <td key={cellIndex}>{row[header]}</td>
-                    ))}
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          )}
-        </div>
+  // --- Extract Tweet IDs ---
+  const tweetIds = bill.tweets
+    .map((tweetHtml) => extractTweetId(tweetHtml))
+    .filter((id) => !!id); // Filter out nulls
 
-        {/* Right Column: Tweets */}
-        <div className={styles.right}>
-          {bill.tweets.map((tweetHtml, idx) => {
-            const tweetId = extractTweetId(tweetHtml);
-            return tweetId ? (
-              <div key={idx} className={styles.tweet}>
-                <Tweet id={tweetId} />
-              </div>
-            ) : (
-              <p key={idx}>Error loading tweet.</p>
-            );
-          })}
-        </div>
-      </div>
-    </div>
+  return (
+    <BillDetailClient
+      title={bill.title}
+      bps={bill.bps}
+      pork={bill.pork}
+      tableData={tableData}
+      tweetIds={tweetIds}
+    />
   );
 }
