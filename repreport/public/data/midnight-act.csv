@@ -1,4 +1,4 @@
-House_Rep_Name,House_Rep_Party,House_Rep_State,House_Rep_Vote
+Name,Party,State,Vote
 Adams,D,NC,Nay,96.8,0.5,0.5,96.3
 Aderholt,R,AL,Yea,96.8,0.5,0.5,96.3
 Aguilar,D,CA,Nay,96.8,0.5,0.5,96.3

@@ -20,7 +20,7 @@ function useMediaQuery(query) {
   return matches;
 }
 
-export default function BillDetailClient({ title, bps, pork, tableData, tweetIds }) {
+export default function BillDetailClient({ title, bps, pork, tableData, tweetIds, articles, passed }) {
   const isMobile = useMediaQuery('(max-width: 768px)');
 
   // Render table
@@ -87,7 +87,7 @@ export default function BillDetailClient({ title, bps, pork, tableData, tweetIds
         {/* Left Column: Top Left (small card) then Bottom Left (large card) */}
         <div className={`${styles.column} ${styles.leftColumn}`}>
           <div className={`${styles.card} ${styles.smallCard}`}>
-            <h1>{title}</h1>
+            <h1>{title}: {passed}</h1>
             <ul>
               {bps.map((bp, idx) => (
                 <li key={idx}>{bp}</li>
@@ -105,7 +105,26 @@ export default function BillDetailClient({ title, bps, pork, tableData, tweetIds
             <div className={styles.scrollable}>{renderTweets()}</div>
           </div>
           <div className={`${styles.card} ${styles.smallCard}`}>
-            {/* Reserved for future content */}
+          <div className={styles.scrollable}>
+            {articles && articles.length ? (
+              <ul className={styles.articleList}>
+                {articles.map((link, index) => (
+                  <li key={index} className={styles.articleItem}>
+                    <a 
+                      href={link} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className={styles.articleLink}
+                    >
+                      {link}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            ) : (
+              <p>No articles available.</p>
+            )}
+            </div>
           </div>
         </div>
       </div>

@@ -46,6 +46,12 @@ export default async function BillDetailPage({ params }) {
   try {
     const csvContent = fs.readFileSync(csvPath, 'utf8');
     tableData = parseCSV(csvContent);
+    // Sort the data alphabetically by House_Rep_State
+    if (tableData && tableData.data) {
+    tableData.data.sort((a, b) =>
+      a['State'].localeCompare(b['State'])
+    );
+  }
   } catch (error) {
     tableData = { error: 'Error loading CSV data' };
   }
@@ -62,6 +68,8 @@ export default async function BillDetailPage({ params }) {
       pork={bill.pork}
       tableData={tableData}
       tweetIds={tweetIds}
+      articles={bill.articles}
+      passed={bill.passed}
     />
   );
 }
