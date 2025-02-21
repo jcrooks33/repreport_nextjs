@@ -62,46 +62,51 @@ export default function BillDetailClient({ title, bps, pork, tableData, tweetIds
     ));
   };
 
-  // If mobile, render a tabbed interface
+  // Mobile view: use tabbed interface
   if (isMobile) {
     return (
       <div className={styles.container}>
         <div className={styles.billCard}>
-        <h1>{title}</h1>
-        <ul>
-          {bps.map((bp, idx) => (
-            <li key={idx}>{bp}</li>
-          ))}
-        </ul>
-        <p>{pork}</p>
+          <h1>{title}</h1>
+          <ul>
+            {bps.map((bp, idx) => (
+              <li key={idx}>{bp}</li>
+            ))}
+          </ul>
+          <p>{pork}</p>
         </div>
-
-        <MobileTabs
-          table={renderTable()}
-          tweets={renderTweets()}
-        />
+        <MobileTabs table={renderTable()} tweets={renderTweets()} />
       </div>
     );
   }
 
-  // Otherwise (desktop), show two-column layout
+  // Desktop view: two columns with independent stacking
   return (
     <div className={styles.container}>
-        <div className={styles.billCard}>
-      <h1>{title}</h1>
-      <ul>
-        {bps.map((bp, idx) => (
-          <li key={idx}>{bp}</li>
-        ))}
-      </ul>
-      <p>{pork}</p>
-</div>
-      <div className={styles.twoColumn}>
-        <div className={styles.left}>
-          {renderTable()}
+      <div className={styles.grid}>
+        {/* Left Column: Top Left (small card) then Bottom Left (large card) */}
+        <div className={`${styles.column} ${styles.leftColumn}`}>
+          <div className={`${styles.card} ${styles.smallCard}`}>
+            <h1>{title}</h1>
+            <ul>
+              {bps.map((bp, idx) => (
+                <li key={idx}>{bp}</li>
+              ))}
+            </ul>
+            <p>{pork}</p>
+          </div>
+          <div className={`${styles.card} ${styles.largeCard}`}>
+            <div className={styles.scrollable}>{renderTable()}</div>
+          </div>
         </div>
-        <div className={styles.right}>
-          {renderTweets()}
+        {/* Right Column: Top Right (large card) then Bottom Right (small card) */}
+        <div className={`${styles.column} ${styles.rightColumn}`}>
+          <div className={`${styles.card} ${styles.largeCard}`}>
+            <div className={styles.scrollable}>{renderTweets()}</div>
+          </div>
+          <div className={`${styles.card} ${styles.smallCard}`}>
+            {/* Reserved for future content */}
+          </div>
         </div>
       </div>
     </div>
@@ -128,7 +133,6 @@ function MobileTabs({ table, tweets }) {
           Tweets
         </button>
       </div>
-
       <div className={styles.tabContent}>
         {activeTab === 'table' ? table : tweets}
       </div>

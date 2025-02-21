@@ -31,8 +31,10 @@ export async function generateStaticParams() {
   return billsData.map((bill) => ({ slug: bill.slug }));
 }
 
-export default function BillDetailPage({ params }) {
-  const { slug } = params;
+export default async function BillDetailPage({ params }) {
+  const { slug } = await params;
+
+  // Now use slug for any async operations like data fetching:
   const bill = billsData.find((b) => b.slug === slug);
   if (!bill) {
     notFound();
