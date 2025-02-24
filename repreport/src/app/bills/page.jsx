@@ -5,6 +5,7 @@ import { billsData } from '@/data/billsData'; // assume you have an array of bil
 
 export default function BillsPage() {
   return (
+    <div className={styles.page}>
     <div className={styles.container}>
       <h1>All Bills</h1>
       <ul className={styles.billList}>
@@ -16,6 +17,7 @@ export default function BillsPage() {
           </li>
         ))}
       </ul>
+    </div>
     </div>
   );
 }

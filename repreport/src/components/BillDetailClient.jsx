@@ -62,6 +62,30 @@ export default function BillDetailClient({ title, bps, pork, tableData, tweetIds
     ));
   };
 
+  // Render articles
+  const renderArticles = () => {
+    return (
+      articles && articles.length ? (
+        <ul className={styles.articleList}>
+          {articles.map((link, index) => (
+            <li key={index} className={styles.articleItem}>
+              <a 
+                href={link} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className={styles.articleLink}
+              >
+                {link}
+              </a>
+            </li>
+          ))}
+        </ul>
+      ) : (
+        <p>No articles available.</p>
+      )
+    );
+  };
+
   // Mobile view: use tabbed interface
   if (isMobile) {
     return (
@@ -75,8 +99,12 @@ export default function BillDetailClient({ title, bps, pork, tableData, tweetIds
           </ul>
           <p>{pork}</p>
         </div>
-        <MobileTabs table={renderTable()} tweets={renderTweets()} />
-      </div>
+        <MobileTabs 
+          table={renderTable()} 
+          tweets={renderTweets()} 
+          articles={renderArticles()} 
+        />
+      </div>      
     );
   }
 
@@ -87,6 +115,7 @@ export default function BillDetailClient({ title, bps, pork, tableData, tweetIds
         {/* Left Column: Top Left (small card) then Bottom Left (large card) */}
         <div className={`${styles.column} ${styles.leftColumn}`}>
           <div className={`${styles.card} ${styles.smallCard}`}>
+          <div className={styles.scrollable}>
             <h1>{title}: {passed}</h1>
             <ul>
               {bps.map((bp, idx) => (
@@ -94,6 +123,7 @@ export default function BillDetailClient({ title, bps, pork, tableData, tweetIds
               ))}
             </ul>
             <p>{pork}</p>
+          </div>
           </div>
           <div className={`${styles.card} ${styles.largeCard}`}>
             <div className={styles.scrollable}>{renderTable()}</div>
@@ -133,7 +163,7 @@ export default function BillDetailClient({ title, bps, pork, tableData, tweetIds
 }
 
 // Simple tabbed interface for mobile
-function MobileTabs({ table, tweets }) {
+function MobileTabs({ table, tweets, articles }) {
   const [activeTab, setActiveTab] = useState('table');
 
   return (
@@ -151,9 +181,17 @@ function MobileTabs({ table, tweets }) {
         >
           Tweets
         </button>
+        <button
+          className={activeTab === 'articles' ? styles.activeTab : ''}
+          onClick={() => setActiveTab('articles')}
+        >
+          Articles
+        </button>
       </div>
       <div className={styles.tabContent}>
-        {activeTab === 'table' ? table : tweets}
+        {activeTab === 'table' && table}
+        {activeTab === 'tweets' && tweets}
+        {activeTab === 'articles' && articles}
       </div>
     </div>
   );

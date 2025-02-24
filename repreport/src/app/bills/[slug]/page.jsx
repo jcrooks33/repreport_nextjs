@@ -46,7 +46,7 @@ export default async function BillDetailPage({ params }) {
   try {
     const csvContent = fs.readFileSync(csvPath, 'utf8');
     tableData = parseCSV(csvContent);
-    // Sort the data alphabetically by House_Rep_State
+    // Sort the data alphabetically by State
     if (tableData && tableData.data) {
     tableData.data.sort((a, b) =>
       a['State'].localeCompare(b['State'])
