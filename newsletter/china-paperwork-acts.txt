@@ -1,0 +1,233 @@
+1:"$Sreact.fragment"
+2:I[8173,["173","static/chunks/173-276d0afeb714dc4a.js","974","static/chunks/app/page-f3029c1d6a7a73b0.js"],""]
+3:I[5244,[],""]
+4:I[3866,[],""]
+6:I[6213,[],"OutletBoundary"]
+8:I[6213,[],"MetadataBoundary"]
+a:I[6213,[],"ViewportBoundary"]
+c:I[4835,[],""]
+:HL["/repreport_nextjs/_next/static/css/1b1dd26d4158deba.css","style"]
+0:{"P":null,"b":"hqxJSnmzypBjGqUWXQy_0","p":"/repreport_nextjs","c":["","newsletter","china-paperwork-acts"],"i":false,"f":[[["",{"children":["newsletter",{"children":[["slug","china-paperwork-acts","d"],{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/repreport_nextjs/_next/static/css/1b1dd26d4158deba.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"en","children":[["$","head",null,{"children":["$","title",null,{"children":"My App"}]}],["$","body",null,{"children":["$","div",null,{"className":"wrapper","children":[["$","header",null,{"className":"header","children":["$","nav",null,{"className":"Nav_nav__RMEH0","children":[["$","div",null,{"className":"Nav_logo__O2hm9","children":[["$","img",null,{"className":"Nav_img__dp4O6","src":"https://mcusercontent.com/4c0f3950dc0f76487d3277a17/images/29a6dce6-8349-3205-7721-84703e973c06.png","alt":"Description"}],["$","h1",null,{"children":"RepReport"}]]}],["$","div",null,{"className":"Nav_links___b5yt","children":[["$","$L2",null,{"href":"/","className":"Nav_linkItem__WWHWa","children":"Home"}],["$","$L2",null,{"href":"/bills","className":"Nav_linkItem__WWHWa","children":"Bills"}],["$","a",null,{"href":"https://www.house.gov/representatives/find-your-representative","target":"_blank","rel":"noopener noreferrer","className":"Nav_linkItem__WWHWa","children":"Find My Rep"}]]}]]}]}],["$","main",null,{"className":"main","children":["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[],[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]]],"forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","footer",null,{"className":"footer","children":["$","footer",null,{"className":"Footer_footer__y_dWn","children":["$","div",null,{"className":"Footer_footerContent__eqoK6","children":[["$","p",null,{"className":"Footer_p__3WV6m","children":"©RepReport. All Rights Reserved"}],["$","div",null,{"className":"Footer_socialLinks__OIu8Z"}]]}]}]}]]}]}]]}]]}],{"children":["newsletter",["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","newsletter","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["slug","china-paperwork-acts","d"],["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","newsletter","children","$0:f:0:1:2:children:2:children:0","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":["__PAGE__",["$","$1","c",{"children":["$L5",null,["$","$L6",null,{"children":"$L7"}]]}],{},null,false]},null,false]},null,false]},null,false],["$","$1","h",{"children":[null,["$","$1","qPqhwrs7EClf0wBuivw5H",{"children":[["$","$L8",null,{"children":"$L9"}],["$","$La",null,{"children":"$Lb"}],null]}]]}],false]],"m":"$undefined","G":["$c","$undefined"],"s":false,"S":true}
+d:T3586,<!DOCTYPE html>
+    <html lang="en">
+    <style>
+    @media only screen and (max-width: 600px) {
+                  /* Let the main-content width shrink on mobile */
+                  .main-content {
+                    width: 90% !important;
+                    max-width: 90% !important;
+                    margin: 0 auto !important;
+                  }
+                
+                  /* Remove the forced left margin on the bullet table */
+                  table[style*="margin-left: 20px"] {
+                    margin-left: 0 !important;
+                  }
+                }
+    </style>
+      <body style="margin:0; padding:0; background-color: #f5f5f5;">
+        <table class="wrapper" width="100%" cellspacing="0" cellpadding="0" style="background-color: #f5f5f5;">
+          <tr>
+            <td align="center">
+              <table class="main-content" width="600" cellspacing="0" cellpadding="0" style="background-color: #ffffff;">
+                <!-- HEADER -->
+                <!-- Your table row for the header -->
+                <tr>
+                  <td style="padding: 20px; text-align: center; background-color: #ffffff;">
+                    <!-- Main headline -->
+                    <div style="font-family: 'Times New Roman', serif; font-size: 32px; font-weight: bold; color: #000;">
+                      Your Rep. Has Voted! 
+                    </div>
+                    <!-- Smaller byline below -->
+                    <div style="font-family: 'Times New Roman', serif; font-size: 14px; font-weight: normal; color: #000; margin-top: 5px;">
+                      By RepReport · Feb 11, 2025
+                    </div>
+    </td></tr><tr>
+      <td style="padding: 0;">
+        <div style="height: 5px; background-color: #f5f5f5; line-height: 5px; font-size: 1px;">&nbsp;</div>
+      </td>
+    </tr>
+            
+                    <tr>
+          <td class="body-section" style="font-family: 'Times New Roman', serif; line-height: 1.8; padding: 20px 30px;">
+            <p class="spaced" style="line-height: 1.8; padding: 0; font-size: 20px; margin: 0; color: #000; text-decoration: none; margin-bottom: 20px;">Good morning,</p>
+            <p style="line-height: 1.8; padding: 0; font-size: 20px; margin: 0; color: #000; text-decoration: none;">Your Congressional Rep. has just voted on the following bills: </p>
+            <table style="width: 100%; border-spacing: 0; margin-left: 20px;"><tr><td style="padding: 5px 0; color: #000; font-size: 20px;">• <i>China Exchange Rate Transparency Act of 2023</i></td></tr><tr><td style="padding: 5px 0; color: #000; font-size: 20px;">• <i>Protect Small Businesses from Excessive Paperwork Act of 2025</i></td></tr></table>
+    
+            <div class="hero-image" style="margin-top: 20px;">
+              <!-- Replace with your own hosted image URL or Base64 data -->
+              <img src="https://mcusercontent.com/4c0f3950dc0f76487d3277a17/images/bfea30bf-72b4-b783-b164-acbfbc15ab9d.jpg" alt="Embedded Image" style="display: block; width: 100%; height: auto;" height="auto">
+            </div>
+    </td></tr><tr>
+      <td style="padding: 0;">
+        <div style="height: 5px; background-color: #f5f5f5; line-height: 5px; font-size: 1px;">&nbsp;</div>
+      </td>
+    </tr>
+    
+    
+    
+    
+        <!-- Single Bill Section -->
+        <tr>
+          <td class="body-section" style="font-family: 'Times New Roman', serif; line-height: 1.8; padding: 20px 30px;">
+            <h3 style="margin: 0; padding: 0; font-size: 20px; text-decoration: underline; font-weight: bold;">China Exchange Rate Transparency Act of 2023 Summary:</h3>
+            <ul class="bill-summary" style="margin: 10px 0;">
+              <li style="font-size: 17px; line-height: 1.8; margin: 0 0 10px 0;">Instructs the U.S. Executive Director at the International Monetary Fund (IMF) to push for greater transparency in China’s exchange rate policies.</li>
+              <li style="font-size: 17px; line-height: 1.8; margin: 0 0 10px 0;">Advocates for increased IMF surveillance of China’s exchange rate practices and alignment with international standards.</li>
+              <li style="font-size: 17px; line-height: 1.8; margin: 0 0 10px 0;">Sets a sunset clause ending the Act 30 days after compliance or 7 years after enactment.</li>
+           </ul>
+            <h3 style="margin: 0; padding: 0; font-size: 20px; text-decoration: underline; font-weight: bold;">"Pork"</h3>
+            <ul class="bill-summary" style="margin: 10px 0;">
+              <li style="font-size: 17px; line-height: 1.8; margin: 0 0 10px 0;">No pork in this bill.</li>
+            </ul>
+    
+            <p style="line-height: 1.8; padding: 0; font-size: 20px; margin: 0; color: #000; text-decoration: none; margin-top: 20px;" "="">
+              Rep. Placeholder
+              voted: Placeholder. House Result: <span style="color:green">Passed</span>
+            </p>
+          </td>
+        </tr>
+         <!-- New Graphic Section -->
+    
+               <tr>
+          <td class="body-section" style="font-family: 'Times New Roman', serif; line-height: 1.8; padding: 20px 30px;">
+            <div style="text-align: center; margin: 20px;">
+              <h3 style="margin: 0; padding: 0; font-size: 24px; font-weight: bold; margin-bottom: 10px;">Partisan Breakdown</h3>
+              <ul style="list-style: none; padding: 0;">
+                <li style="font-size: 17px; line-height: 1.8; margin-bottom: 5px;">
+                  <span style="font-size: 20px; margin-right: 10px;">🐘</span>Republicans: <b>89.9% Yea, 3.2% Nay</b>
+                </li>
+                <li style="font-size: 17px; line-height: 1.8;">
+                  <span style="font-size: 20px; margin-right: 10px;">🐴</span>Democrats: <b>89.3% Yea, 0.0% Nay</b>
+                </li>
+              </ul>
+            </div>
+    </td></tr><tr>
+      <td style="padding: 0;">
+        <div style="height: 5px; background-color: #f5f5f5; line-height: 5px; font-size: 1px;">&nbsp;</div>
+      </td>
+    </tr>
+    
+    
+        
+    
+        <!-- Single Bill Section -->
+        <tr>
+          <td class="body-section" style="font-family: 'Times New Roman', serif; line-height: 1.8; padding: 20px 30px;">
+            <h3 style="margin: 0; padding: 0; font-size: 20px; text-decoration: underline; font-weight: bold;">Protect Small Businesses from Excessive Paperwork Act of 2025 Summary:</h3>
+            <ul class="bill-summary" style="margin: 10px 0;">
+              <li style="font-size: 17px; line-height: 1.8; margin: 0 0 10px 0;">Extends the deadline for companies formed before January 1, 2024, to file beneficial ownership reports (documents revealing the individuals who own or control a company).</li>
+              <li style="font-size: 17px; line-height: 1.8; margin: 0 0 10px 0;">Pushes the filing deadline to January 1, 2026, instead of January 1, 2025.</li>
+              
+           </ul>
+            <h3 style="margin: 0; padding: 0; font-size: 20px; text-decoration: underline; font-weight: bold;">"Pork"</h3>
+            <ul class="bill-summary" style="margin: 10px 0;">
+              <li style="font-size: 17px; line-height: 1.8; margin: 0 0 10px 0;">No pork in this bill.</li>
+            </ul>
+    
+            <p style="line-height: 1.8; padding: 0; font-size: 20px; margin: 0; color: #000; text-decoration: none; margin-top: 20px;" "="">
+              Rep. Placeholder
+              voted: Placeholder. House Result: <span style="color:green">Passed</span>
+            </p>
+          </td>
+        </tr>
+         <!-- New Graphic Section -->
+    
+               <tr>
+          <td class="body-section" style="font-family: 'Times New Roman', serif; line-height: 1.8; padding: 20px 30px;">
+            <div style="text-align: center; margin: 20px;">
+              <h3 style="margin: 0; padding: 0; font-size: 24px; font-weight: bold; margin-bottom: 10px;">Partisan Breakdown</h3>
+              <ul style="list-style: none; padding: 0;">
+                <li style="font-size: 17px; line-height: 1.8; margin-bottom: 5px;">
+                  <span style="font-size: 20px; margin-right: 10px;">🐘</span>Republicans: <b>95.0% Yea, 0.0% Nay</b>
+                </li>
+                <li style="font-size: 17px; line-height: 1.8;">
+                  <span style="font-size: 20px; margin-right: 10px;">🐴</span>Democrats: <b>93.5% Yea, 0.0% Nay</b>
+                </li>
+              </ul>
+            </div>
+    </td></tr>
+    <tr>
+      <td style="padding: 0;">
+        <div style="height: 5px; background-color: #f5f5f5; line-height: 5px; font-size: 1px;">&nbsp;</div>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="body-section" style="font-family: 'Times New Roman', serif; line-height: 1.8; padding: 20px 30px;">
+          <div style="font-size: 17px; line-height: 1.8; margin: 0 0 10px 0; text-align: center; font-style:italic;">Thank you for reading RepReport! Please help friends and family get in the know by forwarding them this email, or having them sign up <a href="https://repreport.org" style="color:blue !important;">here</a>.</div>
+      </td>
+    </tr>
+    
+    <tr>
+      <td style="padding: 0;">
+        <div style="height: 5px; background-color: #f5f5f5; line-height: 5px; font-size: 1px;">&nbsp;</div>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="body-section" style="font-family: 'Times New Roman', serif; line-height: 1.8; padding: 20px 30px;">
+        <div style="font-size: 17px; line-height: 1.8; margin: 0 0 10px 0; text-align: center; font-style:italic;">If you have feedback for us, please feel free to provide it <a href="https://forms.gle/eJ1V4UiTmZM9r58d6" style="color:blue !important;">here</a>.</div>
+      </td>
+    </tr>
+    
+    <tr>
+    <td style="padding: 0;">
+    <div style="height: 5px; background-color: #f5f5f5; line-height: 5px; font-size: 1px;">&nbsp;</div>
+    </td>
+    </tr>
+    
+                        <!-- FOOTER / SIGNUP SECTION -->
+                <tr>
+                  <td class="body-section" style="font-family: 'Times New Roman', serif; line-height: 1.8; padding: 20px 30px; text-align: center;" align="center">
+                    <p style="line-height: 1.8; padding: 0; margin: 0; text-decoration: none; text-align: center; margin-top: 20px; font-size: 14px; color: black;">
+      Forwarded this? <a href="https://repreport.org/" style="text-decoration: underline; color: #007bff; font-weight: bold;">Sign Up Here</a>
+    </p>
+    <p style="line-height: 1.8; padding: 0; margin: 0; text-decoration: none; text-align: center; font-size: 14px; color: black;">
+      <a href="https://repreport.org/" style="text-decoration: none; color: #000;">https://repreport.org/</a>
+    </p>
+    
+                  </td>
+                </tr>
+                <tr>
+                  <td class="footer" style="text-align: center; font-size: 14px; color: #666666; padding: 10px;" align="center">
+                    &copy; 2025 RepReport. All rights reserved.
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+                    <center>
+                    <br>
+                    <table border="0" cellpadding="0" cellspacing="0" width="100%" id="canspamBarWrapper" style="background-color:#FFFFFF; border-top:1px solid #E5E5E5;">
+                        <tr>
+                            <td align="center" valign="top" style="padding-top:20px; padding-bottom:20px;">
+                                <table border="0" cellpadding="0" cellspacing="0" id="canspamBar">
+                                    <tr>
+                                        <td align="center" valign="top" style="color:#606060; font-family:Helvetica, Arial, sans-serif; font-size:11px; line-height:150%; padding-right:20px; padding-bottom:5px; padding-left:20px; text-align:center;">
+                                            This email was sent to <a href="mailto:&lt;&lt; Test Email Address &gt;&gt;" target="_blank" style="color:#404040 !important;">&lt;&lt; Test Email Address &gt;&gt;</a>
+                                            <br>
+                                            <a href="https://repreport.us17.list-manage.com/about?u=4c0f3950dc0f76487d3277a17&id=52679f637a&e=[UNIQID]&c=1c01cdc026" target="_blank" style="color:#404040 !important;"><em>why did I get this?</em></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://repreport.us17.list-manage.com/unsubscribe?u=4c0f3950dc0f76487d3277a17&id=52679f637a&t=b&e=[UNIQID]&c=1c01cdc026" style="color:#404040 !important;">unsubscribe from this list</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://repreport.us17.list-manage.com/profile?u=4c0f3950dc0f76487d3277a17&id=52679f637a&e=[UNIQID]&c=1c01cdc026" style="color:#404040 !important;">update subscription preferences</a>
+                                            <br>
+                                            RepReport &middot; 9169 W State St #3391 &middot; Garden City, ID 83714 &middot; USA
+                                            <br>
+                                            <br>
+                                            
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                    <style type="text/css">
+                        @media only screen and (max-width: 480px){
+                            table#canspamBar td{font-size:14px !important;}
+                            table#canspamBar td a{display:block !important; margin-top:10px !important;}
+                        }
+                    </style>
+                </center></body>
+    </html>5:["$","div",null,{"style":{"padding":"1rem","maxWidth":"800px","margin":"0 auto"},"children":[["$","h1",null,{"children":"China Exchange Rate Transparency and Protect Small Businesses from Excessive Paperwork Acts of 2025"}],["$","div",null,{"children":["$","div",null,{"dangerouslySetInnerHTML":{"__html":"$d"}}]}]]}]
+b:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+9:[["$","meta","0",{"charSet":"utf-8"}],["$","link","1",{"rel":"icon","href":"/repreport_nextjs/favicon.ico","type":"image/x-icon","sizes":"16x16"}]]
+7:null
