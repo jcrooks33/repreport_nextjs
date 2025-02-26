@@ -5,6 +5,12 @@
   background-color: #f9f9f9;
 }
 
+.containerMobile {
+  margin: 0 auto;
+  padding: 1rem;
+  background-color: #f9f9f9;
+}
+
 /* Card styling similar to .infoBlocks */
 .billCard {
   background: #fff;

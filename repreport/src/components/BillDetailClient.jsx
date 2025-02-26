@@ -50,17 +50,23 @@ export default function BillDetailClient({ title, bps, pork, tableData, tweetIds
     );
   };
 
-  // Render tweets
-  const renderTweets = () => {
-    if (!tweetIds.length) {
-      return <p>No tweets available.</p>;
-    }
-    return tweetIds.map((id, idx) => (
-      <div key={idx} className={styles.tweet}>
-        <Tweet id={id} />
-      </div>
-    ));
-  };
+// Render tweets
+const renderTweets = () => {
+  if (!tweetIds.length) {
+    return <p>No tweets available.</p>;
+  }
+  return (
+    <div>
+      <h1>The top tweets from Reps and Committees that name the bill</h1>
+      {tweetIds.map((id, idx) => (
+        <div key={idx} className={styles.tweet}>
+          <Tweet id={id} />
+        </div>
+      ))}
+    </div>
+  );
+};
+
 
   // Render articles
   const renderArticles = () => {
@@ -89,7 +95,7 @@ export default function BillDetailClient({ title, bps, pork, tableData, tweetIds
   // Mobile view: use tabbed interface
   if (isMobile) {
     return (
-      <div className={styles.container}>
+      <div className={styles.containerMobile}>
         <div className={styles.billCard}>
           <h1>{title}</h1>
           <ul>
