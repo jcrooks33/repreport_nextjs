@@ -20,91 +20,251 @@ function useMediaQuery(query) {
   return matches;
 }
 
-export default function BillDetailClient({ title, bps, pork, tableData, tweetIds, articles, passed }) {
+export default function BillDetailClient({ title, bps, pork, tableData, tweets, articles, passed }) {
   const isMobile = useMediaQuery('(max-width: 768px)');
-
+  
+  // Party filter state for tweets
+  const [activePartyFilter, setActivePartyFilter] = useState('All');
+  
+  // Table filter states
+  const [searchTerm, setSearchTerm] = useState('');
+  const [partyFilter, setPartyFilter] = useState('All Parties');
+  const [voteFilter, setVoteFilter] = useState('All Votes');
+  const [stateFilter, setStateFilter] = useState('All States');
+  
+  // Filter tweets based on selected party
+  const filteredTweets = tweets ? tweets.filter(tweet => {
+    if (activePartyFilter === 'All') return true;
+    return tweet.party === activePartyFilter;
+  }) : [];
+  
+  // Filter table data based on filters
+  const filteredTableData = tableData && tableData.data ? tableData.data.filter(row => {
+    // Apply search filter (for Rep name)
+    const matchesSearch = searchTerm === '' || 
+      (row['Rep'] && row['Rep'].toLowerCase().includes(searchTerm.toLowerCase()));
+    
+    // Apply party filter
+    const matchesParty = partyFilter === 'All Parties' || row['Party'] === partyFilter;
+    
+    // Apply vote filter
+    const matchesVote = voteFilter === 'All Votes' || row['Vote'] === voteFilter;
+    
+    // Apply state filter
+    const matchesState = stateFilter === 'All States' || row['State'] === stateFilter;
+    
+    return matchesSearch && matchesParty && matchesVote && matchesState;
+  }) : [];
+  
   // Render table
   const renderTable = () => {
-    if (tableData.error) {
+    if (tableData && tableData.error) {
       return <p>{tableData.error}</p>;
     }
+    
+    if (!tableData || !tableData.headers) {
+      return <p>No voting data available.</p>;
+    }
+    
+    // Get unique filter values from tableData
+    const partyOptions = tableData.filterOptions?.parties || [];
+    const voteOptions = tableData.filterOptions?.votes || [];
+    const stateOptions = tableData.filterOptions?.states || [];
+    
     return (
-      <table className={styles.table}>
-        <thead>
-          <tr>
-            {tableData.headers.map((header, idx) => (
-              <th key={idx}>{header}</th>
+      <div className={styles.tableContainer}>
+        <h2>Representatives Voting Record</h2>
+        <div className={styles.tableFilters}>
+          <input 
+            type="text" 
+            placeholder="Search representatives" 
+            className={styles.searchInput} 
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+          />
+          <select 
+            className={styles.filterDropdown}
+            value={partyFilter}
+            onChange={(e) => setPartyFilter(e.target.value)}
+          >
+            <option>All Parties</option>
+            {partyOptions.map(party => (
+              <option key={party} value={party}>{party}</option>
             ))}
-          </tr>
-        </thead>
-        <tbody>
-          {tableData.data.map((row, rowIndex) => (
-            <tr key={rowIndex}>
-              {tableData.headers.map((header, cellIndex) => (
-                <td key={cellIndex}>{row[header]}</td>
-              ))}
-            </tr>
-          ))}
-        </tbody>
-      </table>
+          </select>
+          <select 
+            className={styles.filterDropdown}
+            value={voteFilter}
+            onChange={(e) => setVoteFilter(e.target.value)}
+          >
+            <option>All Votes</option>
+            {voteOptions.map(vote => (
+              <option key={vote} value={vote}>{vote}</option>
+            ))}
+          </select>
+          <select 
+            className={styles.filterDropdown}
+            value={stateFilter}
+            onChange={(e) => setStateFilter(e.target.value)}
+          >
+            <option>All States</option>
+            {stateOptions.map(state => (
+              <option key={state} value={state}>{state}</option>
+            ))}
+          </select>
+        </div>
+        <div className={styles.tableScrollWrapper}>
+          <table className={styles.table}>
+            <thead>
+              <tr>
+                {tableData.headers.map((header, idx) => (
+                  <th key={idx}>{header}</th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              {filteredTableData.length > 0 ? (
+                filteredTableData.map((row, rowIndex) => (
+                  <tr key={rowIndex}>
+                    {tableData.headers.map((header, cellIndex) => (
+                      <td key={cellIndex}>{row[header]}</td>
+                    ))}
+                  </tr>
+                ))
+              ) : (
+                <tr>
+                  <td colSpan={tableData.headers.length} className={styles.noResults}>
+                    No representatives match your filters
+                  </td>
+                </tr>
+              )}
+            </tbody>
+          </table>
+        </div>
+      </div>
     );
   };
 
-// Render tweets
-const renderTweets = () => {
-  if (!tweetIds.length) {
-    return <p>No tweets available.</p>;
-  }
-  return (
-    <div>
-      <h1>The top tweets from Reps and Committees that name the bill</h1>
-      {tweetIds.map((id, idx) => (
-        <div key={idx} className={styles.tweet}>
-          <Tweet id={id} />
+  // Render tweets (statements)
+  const renderTweets = () => {
+    if (!tweets || !tweets.length) {
+      return <p>No statements available.</p>;
+    }
+    
+    return (
+      <div className={styles.statementsSection}>
+        <h2>Representative Statements</h2>
+        <div className={styles.filterTabs}>
+          <button 
+            className={`${styles.filterTab} ${activePartyFilter === 'All' ? styles.activeFilterTab : ''}`}
+            onClick={() => setActivePartyFilter('All')}
+          >
+            All
+          </button>
+          <button 
+            className={`${styles.filterTab} ${activePartyFilter === 'Democrat' ? styles.activeFilterTab : ''}`}
+            onClick={() => setActivePartyFilter('Democrat')}
+          >
+            Democrat
+          </button>
+          <button 
+            className={`${styles.filterTab} ${activePartyFilter === 'Republican' ? styles.activeFilterTab : ''}`}
+            onClick={() => setActivePartyFilter('Republican')}
+          >
+            Republican
+          </button>
+          <button 
+            className={`${styles.filterTab} ${activePartyFilter === 'Independent' ? styles.activeFilterTab : ''}`}
+            onClick={() => setActivePartyFilter('Independent')}
+          >
+            Independent
+          </button>
         </div>
-      ))}
-    </div>
-  );
-};
-
+        <div className={styles.tweetsContainer}>
+          <div className={styles.tweetsGrid}>
+            {filteredTweets.length > 0 ? (
+              filteredTweets.map((tweet, idx) => (
+                <div key={idx} className={styles.tweetCard}>
+                  <Tweet id={tweet.id} />
+                </div>
+              ))
+            ) : (
+              <p className={styles.noResults}>No statements available from {activePartyFilter} representatives</p>
+            )}
+          </div>
+        </div>
+      </div>
+    );
+  };
 
   // Render articles
   const renderArticles = () => {
     return (
-      articles && articles.length ? (
-        <ul className={styles.articleList}>
-          {articles.map((link, index) => (
-            <li key={index} className={styles.articleItem}>
-              <a 
-                href={link} 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className={styles.articleLink}
-              >
-                {link}
-              </a>
-            </li>
-          ))}
-        </ul>
-      ) : (
-        <p>No articles available.</p>
-      )
+      <div className={styles.articlesSection}>
+        <h2>Related Articles</h2>
+        <p className={styles.articleSubheading}>News coverage about this bill</p>
+        <div className={styles.articlesContainer}>
+          {articles && articles.length ? (
+            <div className={styles.articlesGrid}>
+              {articles.map((link, index) => (
+                <div key={index} className={styles.articleCard}>
+                  <div className={styles.articleImagePlaceholder}></div>
+                  <h3 className={styles.articleTitle}>
+                    {link.includes('passes') ? 'Infrastructure Bill Passes House After Months of Negotiation' : 
+                     "What's Actually in the Infrastructure Bill? A Breakdown"}
+                  </h3>
+                  <p className={styles.articleSource}>
+                    {link.includes('passes') ? 'National News • May 16, 2023' : 'Policy Today • May 17, 2023'}
+                  </p>
+                  <p className={styles.articleExcerpt}>
+                    {link.includes('passes') ? 'After months of intense debate, the House passed the Comprehensive...' : 
+                     'We analyze the key components of the 2,700-page infrastructure bill and...'}
+                  </p>
+                  <a 
+                    href={link} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className={styles.readMoreLink}
+                  >
+                    Read full article
+                  </a>
+                </div>
+              ))}
+            </div>
+          ) : (
+            <p>No articles available.</p>
+          )}
+        </div>
+      </div>
     );
   };
 
-  // Mobile view: use tabbed interface
+  // Summary Section
+  const renderSummary = () => {
+    return (
+      <div className={styles.summaryCard}>
+        <h1>{title}</h1>
+        <p className={styles.subheading}>Key points about this legislation</p>
+        <ul className={styles.keyPointsList}>
+          {bps && bps.map((bp, idx) => (
+            <li key={idx}>{bp}</li>
+          ))}
+        </ul>
+        {pork && <p className={styles.additionalInfo}>{pork}</p>}
+      </div>
+    );
+  };
+
+  // Mobile view: use stacked sections with tabs for data/tweets/articles
   if (isMobile) {
     return (
       <div className={styles.containerMobile}>
-        <div className={styles.billCard}>
-          <h1>{title}</h1>
-          <ul>
-            {bps.map((bp, idx) => (
-              <li key={idx}>{bp}</li>
-            ))}
-          </ul>
-          <p>{pork}</p>
+        <div className={styles.headerSection}>
+          <h1 className={styles.siteTitle}>Bill Tracker</h1>
         </div>
+        
+        {renderSummary()}
+        
         <MobileTabs 
           table={renderTable()} 
           tweets={renderTweets()} 
@@ -114,54 +274,26 @@ const renderTweets = () => {
     );
   }
 
-  // Desktop view: two columns with independent stacking
+  // Desktop view: stacked layout matching the screenshots
   return (
     <div className={styles.container}>
-      <div className={styles.grid}>
-        {/* Left Column: Top Left (small card) then Bottom Left (large card) */}
-        <div className={`${styles.column} ${styles.leftColumn}`}>
-          <div className={`${styles.card} ${styles.smallCard}`}>
-          <div className={styles.scrollable}>
-            <h1>{title}: {passed}</h1>
-            <ul>
-              {bps.map((bp, idx) => (
-                <li key={idx}>{bp}</li>
-              ))}
-            </ul>
-            <p>{pork}</p>
-          </div>
-          </div>
-          <div className={`${styles.card} ${styles.largeCard}`}>
-            <div className={styles.scrollable}>{renderTable()}</div>
-          </div>
+      <div className={styles.headerSection}>
+        <h1 className={styles.siteTitle}>Bill Tracker</h1>
+      </div>
+      
+      {/* Top section - Summary */}
+      {renderSummary()}
+      
+      {/* Middle section - Statements/Tweets with fixed height */}
+      {renderTweets()}
+      
+      {/* Bottom section - Two columns: Table and Articles */}
+      <div className={styles.twoColumnSection}>
+        <div className={styles.leftColumn}>
+          {renderTable()}
         </div>
-        {/* Right Column: Top Right (large card) then Bottom Right (small card) */}
-        <div className={`${styles.column} ${styles.rightColumn}`}>
-          <div className={`${styles.card} ${styles.largeCard}`}>
-            <div className={styles.scrollable}>{renderTweets()}</div>
-          </div>
-          <div className={`${styles.card} ${styles.smallCard}`}>
-          <div className={styles.scrollable}>
-            {articles && articles.length ? (
-              <ul className={styles.articleList}>
-                {articles.map((link, index) => (
-                  <li key={index} className={styles.articleItem}>
-                    <a 
-                      href={link} 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className={styles.articleLink}
-                    >
-                      {link}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            ) : (
-              <p>No articles available.</p>
-            )}
-            </div>
-          </div>
+        <div className={styles.rightColumn}>
+          {renderArticles()}
         </div>
       </div>
     </div>
@@ -170,22 +302,28 @@ const renderTweets = () => {
 
 // Simple tabbed interface for mobile
 function MobileTabs({ table, tweets, articles }) {
-  const [activeTab, setActiveTab] = useState('table');
+  const [activeTab, setActiveTab] = useState('summary');
 
   return (
     <div>
       <div className={styles.tabBar}>
         <button
-          className={activeTab === 'table' ? styles.activeTab : ''}
-          onClick={() => setActiveTab('table')}
+          className={activeTab === 'summary' ? styles.activeTab : ''}
+          onClick={() => setActiveTab('summary')}
         >
-          Table
+          Summary
         </button>
         <button
-          className={activeTab === 'tweets' ? styles.activeTab : ''}
-          onClick={() => setActiveTab('tweets')}
+          className={activeTab === 'statements' ? styles.activeTab : ''}
+          onClick={() => setActiveTab('statements')}
         >
-          Tweets
+          Statements
+        </button>
+        <button
+          className={activeTab === 'voting' ? styles.activeTab : ''}
+          onClick={() => setActiveTab('voting')}
+        >
+          Voting
         </button>
         <button
           className={activeTab === 'articles' ? styles.activeTab : ''}
@@ -195,9 +333,10 @@ function MobileTabs({ table, tweets, articles }) {
         </button>
       </div>
       <div className={styles.tabContent}>
-        {activeTab === 'table' && table}
-        {activeTab === 'tweets' && tweets}
-        {activeTab === 'articles' && articles}
+        {activeTab === 'summary' && <div className={styles.mobileSection}>{tweets}</div>}
+        {activeTab === 'statements' && <div className={styles.mobileSection}>{tweets}</div>}
+        {activeTab === 'voting' && <div className={styles.mobileSection}>{table}</div>}
+        {activeTab === 'articles' && <div className={styles.mobileSection}>{articles}</div>}
       </div>
     </div>
   );

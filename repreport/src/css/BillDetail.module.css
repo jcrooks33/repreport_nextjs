@@ -1,7 +1,8 @@
-/* Container & Basic Typography */
+/* Container & Basic Layout */
 .container {
   margin: 0 auto;
-  padding: 4rem;
+  padding: 2rem;
+  max-width: 1200px;
   background-color: #f9f9f9;
 }
 
@@ -11,69 +12,338 @@
   background-color: #f9f9f9;
 }
 
-/* Card styling similar to .infoBlocks */
-.billCard {
+/* Header */
+.headerSection {
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 1rem;
+  margin-bottom: 2rem;
+}
+
+.siteTitle {
+  font-size: 1.75rem;
+  font-weight: bold;
+  color: #000;
+  margin: 0;
+}
+
+/* Summary Card */
+.summaryCard {
   background: #fff;
   border-radius: 8px;
   padding: 2rem;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   margin-bottom: 2rem;
 }
 
-.billCard h1 {
-  font-size: 2.5rem;
-  margin-bottom: 0.5rem;
-  color: #1c1e21;
-  text-align: left;
+.summaryCard h1 {
+  font-size: 2rem;
+  margin: 0 0 0.25rem 0;
+  font-weight: bold;
+  color: #000;
 }
 
-.billCard ul {
+.subheading {
+  color: #666;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+}
+
+.keyPointsList {
   list-style-type: disc;
   padding-left: 1.5rem;
   line-height: 1.6;
+  margin: 1rem 0;
 }
 
-.billCard p {
-  font-size: 1.1rem;
-  line-height: 1.6;
+.keyPointsList li {
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.additionalInfo {
+  margin-top: 1.5rem;
   color: #555;
-  margin-top: 1rem;
+  line-height: 1.6;
 }
 
-/* Table Styling */
-.table {
-  width: 90%;
-  border-collapse: collapse;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  overflow: hidden;
+/* Statements Section */
+.statementsSection {
+  background: #fff;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   margin-bottom: 2rem;
 }
 
-.table th,
-.table td {
+.statementsSection h2 {
+  font-size: 1.5rem;
+  margin: 0 0 1.5rem 0;
+  font-weight: bold;
+}
+
+.filterTabs {
+  display: flex;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.filterTab {
+  padding: 0.75rem 1.5rem;
+  background: none;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: #555;
+}
+
+.activeFilterTab {
+  border-bottom: 2px solid #000;
+  color: #000;
+  font-weight: 500;
+}
+
+/* Tweets Container with fixed height and scrolling */
+.tweetsContainer {
+  height: 500px; /* Fixed height for the tweets section */
+  overflow-y: auto; /* Enable vertical scrolling */
+  padding-right: 0.5rem; /* Add some padding for the scrollbar */
+}
+
+.tweetsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  grid-template-rows: repeat(2, auto); /* 2 rows initially visible */
+  gap: 1.5rem;
+}
+
+.tweetCard {
+  background: #f9f9f9;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  /* Set a max width to ensure consistent sizing */
+  max-width: 100%;
+  /* Ensure tweet content doesn't overflow */
+  overflow: hidden;
+}
+
+/* Ensure Tweet embeds fit within cards */
+.tweetCard :global(.react-tweet) {
+  max-width: 100% !important;
+  width: 100% !important;
+}
+
+/* Two Column Layout */
+.twoColumnSection {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.leftColumn, .rightColumn {
+  background: #fff;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Make columns equal height */
+.leftColumn {
+  height: 100%;
+  max-height: 600px; /* Set a max height for consistency */
+}
+
+.rightColumn {
+  height: 100%;
+  max-height: 600px; /* Same max height as leftColumn */
+}
+
+/* Voting Table Section */
+.tableContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.tableContainer h2 {
+  font-size: 1.5rem;
+  margin: 0 0 1.5rem 0;
+  font-weight: bold;
+}
+
+.tableFilters {
+  display: flex;
+  margin-bottom: 1.5rem;
+  gap: 0.75rem;
+}
+
+.searchInput {
+  flex: 1;
+  padding: 0.5rem 1rem;
   border: 1px solid #ddd;
-  padding: 0.5rem;
+  border-radius: 4px;
+  font-size: 0.875rem;
+}
+
+.filterDropdown {
+  padding: 0.5rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background: #fff;
+  font-size: 0.875rem;
+}
+
+/* New table wrapper with scrolling */
+.tableScrollWrapper {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: auto;
+  padding-right: 0.5rem;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.table th, .table td {
+  border-bottom: 1px solid #eee;
+  padding: 0.75rem 0.5rem;
   text-align: left;
 }
 
 .table th {
-  background-color: #f7f7f7;
+  font-weight: 500;
+  color: #444;
+  position: sticky;
+  top: 0;
+  background: #fff;
+  z-index: 1;
 }
 
-/* Tweet Block Styling */
-.tweet {
-  width: 90%;
-  padding: 1rem;
-  border-radius: 5px;
+/* Articles Section */
+.articlesSection {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.articlesSection h2 {
+  font-size: 1.5rem;
+  margin: 0 0 0.5rem 0;
+  font-weight: bold;
+}
+
+.articleSubheading {
+  color: #666;
+  margin-top: 0;
   margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+}
+
+.articlesContainer {
+  flex: 1;
+  overflow-y: auto;
+  padding-right: 0.5rem;
+}
+
+.articlesGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.articleCard {
+  border-radius: 4px;
+  background: #f5f5f5;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.articleImagePlaceholder {
+  height: 120px;
+  background: #e0e0e0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.articleTitle {
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding: 0.75rem 1rem 0.5rem;
+  margin: 0;
+}
+
+.articleSource {
+  color: #666;
+  font-size: 0.8rem;
+  padding: 0 1rem;
+  margin: 0 0 0.5rem 0;
+}
+
+.articleExcerpt {
+  padding: 0 1rem;
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
+  color: #444;
+}
+
+.readMoreLink {
+  display: block;
+  padding: 0.75rem 1rem;
+  color: #444;
+  text-decoration: none;
+  font-size: 0.875rem;
+  display: flex;
+  align-items: center;
+}
+
+.readMoreLink::after {
+  content: "→";
+  margin-left: 0.5rem;
+}
+
+/* Custom Scrollbar for scrollable elements */
+.tweetsContainer::-webkit-scrollbar,
+.tableScrollWrapper::-webkit-scrollbar,
+.articlesContainer::-webkit-scrollbar {
+  width: 8px;
+}
+
+.tweetsContainer::-webkit-scrollbar-track,
+.tableScrollWrapper::-webkit-scrollbar-track,
+.articlesContainer::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.tweetsContainer::-webkit-scrollbar-thumb,
+.tableScrollWrapper::-webkit-scrollbar-thumb,
+.articlesContainer::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+
+.tweetsContainer::-webkit-scrollbar-thumb:hover,
+.tableScrollWrapper::-webkit-scrollbar-thumb:hover,
+.articlesContainer::-webkit-scrollbar-thumb:hover {
+  background: #a1a1a1;
 }
 
 /* Tab Bar (Mobile) */
 .tabBar {
   display: flex;
   border-bottom: 1px solid #ddd;
-  margin: 1rem 0;
+  margin-bottom: 1rem;
+  overflow-x: auto;
 }
 
 .tabBar button {
@@ -82,100 +352,54 @@
   background: none;
   border: none;
   cursor: pointer;
-  font-size: 1rem;
+  font-size: 0.9rem;
   transition: background-color 0.2s ease;
-}
-
-.tabBar button:hover {
-  background-color: #f7f7f7;
+  white-space: nowrap;
 }
 
 .activeTab {
-  background-color: #eaeaea;
-  font-weight: bold;
+  border-bottom: 2px solid #000;
+  font-weight: 500;
 }
 
-/* Tab Content */
 .tabContent {
   margin-top: 1rem;
 }
 
-/* Layout for desktop using two columns */
-.grid {
-  display: flex;
-  gap: 2rem;
-}
-
-/* Column: stacks cards independently */
-.column {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-}
-
-/* Card styling (similar to your existing .billCard) */
-.card {
+.mobileSection {
   background: #fff;
   border-radius: 8px;
-  padding: 2rem;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  padding: 1.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
-/* Card sizes */
-.smallCard {
-  height: 300px;
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .tweetsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
-.largeCard {
-  height: 800px;
-}
+@media (max-width: 768px) {
+  .tweetsGrid, .articlesGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .twoColumnSection {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .tableFilters {
+    flex-direction: column;
+  }
+  
+  .tweetsContainer {
+    height: 400px; /* Slightly smaller height on smaller screens */
+  }
 
-/* Make scrollable areas fill their card */
-.scrollable {
-  height: 100%;
-  overflow-y: auto;
-}
-
-/* Flex values for columns: adjust these to change widths */
-.leftColumn {
-  flex: 1;
-}
-
-.rightColumn {
-  flex: 1.2;  /* Makes the right column slightly wider */
-}
-
-/* Articles.module.css or add these to your BillDetail.module.css */
-.articleList {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.articleItem {
-  margin-bottom: 1.5rem;
-  border: 1px solid #ddd;
-  padding: 1rem;
-  border-radius: 5px;
-  transition: box-shadow 0.2s ease;
-}
-
-.articleItem:hover {
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-.articleLink {
-  text-decoration: none;
-  color: inherit;
-  display: block;
-}
-
-.articleLink h2 {
-  margin: 0;
-  font-size: 1.5rem;
-}
-
-.articleLink p {
-  margin: 0.5rem 0 0;
-  color: #555;
+  .tableScrollWrapper, 
+  .articlesContainer {
+    max-height: 400px;
+  }
 }

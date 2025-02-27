@@ -6,25 +6,52 @@ import { notFound } from 'next/navigation';
 import { billsData } from '@/data/billsData';
 import BillDetailClient from '../../../components/BillDetailClient' // <-- Client component
 
-// Parse CSV
+// Parse CSV with support for quoted fields
 function parseCSV(csvString) {
   const lines = csvString.trim().split('\n');
   const headers = lines[0].split(',').map((h) => h.trim());
-  const data = lines.slice(1).map((line) => {
-    const values = line.split(',').map((val) => val.trim());
+  
+  const data = [];
+  
+  // Process each line
+  for (let i = 1; i < lines.length; i++) {
+    const line = lines[i];
     const row = {};
-    headers.forEach((header, i) => {
-      row[header] = values[i] || '';
+    
+    // Special handling for quoted fields that may contain commas
+    let values = [];
+    let currentValue = '';
+    let inQuotes = false;
+    
+    for (let j = 0; j < line.length; j++) {
+      const char = line[j];
+      
+      if (char === '"') {
+        inQuotes = !inQuotes;
+      } else if (char === ',' && !inQuotes) {
+        // End of field
+        values.push(currentValue.trim());
+        currentValue = '';
+      } else {
+        currentValue += char;
+      }
+    }
+    
+    // Add the last field
+    values.push(currentValue.trim());
+    
+    // Remove quotes from values
+    values = values.map(val => val.replace(/^"(.*)"$/, '$1'));
+    
+    // Assign values to headers
+    headers.forEach((header, index) => {
+      row[header] = values[index] || '';
     });
-    return row;
-  });
+    
+    data.push(row);
+  }
+  
   return { headers, data };
-}
-
-// Extract tweet ID from embed HTML (looks for /status/ID).
-function extractTweetId(embedHtml) {
-  const match = embedHtml.match(/\/status\/(\d+)/);
-  return match ? match[1] : null;
 }
 
 export async function generateStaticParams() {
@@ -46,20 +73,28 @@ export default async function BillDetailPage({ params }) {
   try {
     const csvContent = fs.readFileSync(csvPath, 'utf8');
     tableData = parseCSV(csvContent);
+    
+    // Extract unique values for filtering
+    const uniqueStates = [...new Set(tableData.data.map(row => row['State']))].sort();
+    const uniqueParties = [...new Set(tableData.data.map(row => row['Party']))].sort();
+    const uniqueVotes = [...new Set(tableData.data.map(row => row['Vote']))].sort();
+    
+    // Add the filter options to the tableData
+    tableData.filterOptions = {
+      states: uniqueStates,
+      parties: uniqueParties,
+      votes: uniqueVotes
+    };
+    
     // Sort the data alphabetically by State
     if (tableData && tableData.data) {
-    tableData.data.sort((a, b) =>
-      a['State'].localeCompare(b['State'])
-    );
-  }
+      tableData.data.sort((a, b) =>
+        a['State'].localeCompare(b['State'])
+      );
+    }
   } catch (error) {
     tableData = { error: 'Error loading CSV data' };
   }
-
-  // --- Extract Tweet IDs ---
-  const tweetIds = bill.tweets
-    .map((tweetHtml) => extractTweetId(tweetHtml))
-    .filter((id) => !!id); // Filter out nulls
 
   return (
     <BillDetailClient
@@ -67,7 +102,7 @@ export default async function BillDetailPage({ params }) {
       bps={bill.bps}
       pork={bill.pork}
       tableData={tableData}
-      tweetIds={tweetIds}
+      tweets={bill.tweets} // Pass the tweets array directly
       articles={bill.articles}
       passed={bill.passed}
     />
