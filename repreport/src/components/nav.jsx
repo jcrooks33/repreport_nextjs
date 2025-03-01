@@ -26,7 +26,7 @@ export default function Navbar() {
           <Link href="/bills" className={styles.linkItem}>
             Bills
           </Link>
-          <Link href="/newsletters" className={styles.linkItem}>
+          <Link href="/newsletter" className={styles.linkItem}>
             Newsletters
           </Link>
           <Link href="/about" className={styles.linkItem}>

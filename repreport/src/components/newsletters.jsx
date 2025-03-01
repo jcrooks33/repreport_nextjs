@@ -35,7 +35,7 @@ export default function HomepageNewsletters({ newsletters }) {
         </div>
         
         <div className={styles.viewAllContainer}>
-          <Link href="/newsletters" className={styles.viewAllButton}>
+          <Link href="/newsletter" className={styles.viewAllButton}>
             View All Newsletters
           </Link>
         </div>
