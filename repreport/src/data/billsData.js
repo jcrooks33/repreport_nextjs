@@ -75,7 +75,11 @@ export const billsData = [
     articles: [
       'https://example.com','https://example2.com','https://example3.com','https://example.com','https://example2.com','https://example3.com'
     ],
-    passed: "Passed"
+    passed: "Passed",
+    date: 'Feb 7, 2025',
+    description: 'Addresses the fentanyl crisis and protects domestic energy production capabilities through a series of...',
+    tags: ['Healthcare', 'Energy'],
+    sponsor: 'Bipartisan',
   },
 
   {

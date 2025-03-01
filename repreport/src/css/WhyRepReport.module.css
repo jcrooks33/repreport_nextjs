@@ -1,0 +1,193 @@
+.whySection {
+    padding: 70px 0;
+    background-color: #fff;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .headerSection {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+  
+  .mainHeading {
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: #000;
+  }
+  
+  .subheading {
+    font-size: 20px;
+    color: #666;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  
+  .contentGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+  }
+  
+  /* Left column - Image */
+  .imageColumn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .capitolImage {
+    width: 100%;
+    max-width: 550px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Right column - Why RepReport */
+  .infoColumn {
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    padding: 40px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  }
+  
+  .whyTitle {
+    font-size: 28px;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 30px;
+    color: #000;
+  }
+  
+  .reasonItem {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 24px;
+  }
+  
+  .checkmark {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    background-color: #e8f5e9;
+    color: #4CAF50;
+    border-radius: 50%;
+    font-size: 16px;
+    flex-shrink: 0;
+  }
+  
+  .reasonContent h4 {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0 0 8px 0;
+    color: #333;
+  }
+  
+  .reasonContent p {
+    margin: 0;
+    color: #666;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  
+  .subscribeButton {
+    display: inline-block;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 14px 32px;
+    border-radius: 6px;
+    font-size: 18px;
+    font-weight: 500;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 30px;
+    text-align: center;
+  }
+  
+  .subscribeButton:hover {
+    background-color: #3e8e41;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 992px) {
+    .whySection {
+      padding: 50px 0;
+    }
+    
+    .mainHeading {
+      font-size: 36px;
+    }
+    
+    .contentGrid {
+      gap: 40px;
+    }
+    
+    .infoColumn {
+      padding: 30px;
+    }
+    
+    .whyTitle {
+      font-size: 24px;
+      margin-bottom: 24px;
+    }
+    
+    .reasonContent h4 {
+      font-size: 18px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .whySection {
+      padding: 40px 0;
+    }
+    
+    .headerSection {
+      margin-bottom: 40px;
+    }
+    
+    .mainHeading {
+      font-size: 32px;
+    }
+    
+    .subheading {
+      font-size: 18px;
+    }
+    
+    .contentGrid {
+      grid-template-columns: 1fr;
+      gap: 30px;
+    }
+    
+    .capitolImage {
+      max-width: 100%;
+    }
+    
+    .infoColumn {
+      padding: 25px;
+    }
+    
+    .reasonItem {
+      margin-bottom: 20px;
+    }
+    
+    .subscribeButton {
+      width: 100%;
+      padding: 12px 20px;
+      font-size: 16px;
+      margin-top: 20px;
+    }
+  }

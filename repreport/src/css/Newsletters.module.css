@@ -1,100 +1,137 @@
-.newsletterSection {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
-    padding: 5vh 8vw;
-    background-color: #f9f9f9;
+.newslettersSection {
+  padding: 60px 0;
+  background-color: #f9f9f9;
+}
+
+.newslettersContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.sectionTitle {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 40px;
+  text-align: center;
+  color: #333;
+}
+
+.newslettersGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.newsletterCard {
+  background-color: white;
+  border-radius: 8px;
+  padding: 30px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border: 1px solid #eaeaea;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.newsletterCard:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.newsletterTitle {
+  font-size: 22px;
+  font-weight: 700;
+  margin: 0 0 16px 0;
+  line-height: 1.3;
+  color: #000;
+}
+
+.newsletterDate {
+  color: #666;
+  font-size: 15px;
+  margin-bottom: 20px;
+  flex-grow: 1;
+}
+
+.readMoreContainer {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: auto;
+}
+
+.readMoreLink {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #000;
+  font-weight: 500;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.2s;
+}
+
+.readMoreLink:hover {
+  color: #555;
+}
+
+.readMoreLink svg {
+  transition: transform 0.2s;
+}
+
+.readMoreLink:hover svg {
+  transform: translateX(3px);
+}
+
+.viewAllContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 80px;
+  padding-top: 10px;
+}
+
+.viewAllButton {
+  background-color: white;
+  color: #333;
+  border: 1px solid #ddd;
+  padding: 12px 30px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.viewAllButton:hover {
+  background-color: #f0f0f0;
+  transform: translateY(-2px);
+}
+
+/* Responsive styles */
+@media (max-width: 992px) {
+  .newslettersGrid {
+    grid-template-columns: repeat(2, 1fr);
   }
-  
-  .imageContainer {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .imageContainer img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-  }
-  
-  .textContainer {
-    flex: 1;
-    margin-left: 4vw;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  /* Title + simple divider under it */
-  .heading {
-    font-size: 1.75rem;
-    margin-bottom: 1rem;
-    color: #1c1e21;
-  }
-  
-  .divider {
-    border: none;
-    border-top: 1px solid #ccc;
-    margin: 1rem 0;
-  }
-  
-  /* This container scrolls if content gets too large */
-  .listScroll {
-    max-height: 300px;     /* Adjust to your preference */
-    overflow-y: auto;
-    padding-right: 1rem;   /* So scroll bar doesn't overlap text */
-  }
-  
-  /* Each clickable newsletter item */
-  .newsletterItem {
-    display: block;
-    text-decoration: none;  /* Remove link underlines */
-    color: inherit;         /* Inherit text color for a clean look */
-    margin-bottom: 1rem;    /* Space between items */
-    cursor: pointer;
-  }
-  
-  /* Subtle hover effect */
-  .newsletterItem:hover h3 {
-    text-decoration: underline;
-    color: #007bff;
-  }
-  
-  /* Title within each newsletter item */
-  .newsletterItem h3 {
-    font-size: 1.1rem;
-    margin: 0 0 0.3rem;
-    color: #333;
-  }
-  
-  /* Date or short text under each item */
-  .newsletterItem p {
-    margin: 0;
-    font-size: 0.95rem;
-    color: #555;
-  }
-/* Add this media query to place the image on top on smaller screens */
+}
+
 @media (max-width: 768px) {
-    .newsletterSection {
-      flex-direction: column; /* Stack vertically */
-      padding: 2rem;         /* Adjust padding for mobile */
-    }
-  
-    .imageContainer {
-      margin-bottom: 2rem;   /* Space between image and text on mobile */
-    }
-  
-    .textContainer {
-      margin-left: 0;        /* Remove left margin */
-    }
-  
-    /* Optional: if you don't want the scrollable list 
-       to be capped in height on small screens */
-    .listScroll {
-      max-height: unset;
-    }
+  .newslettersSection {
+    padding: 40px 0;
+  }
+
+  .sectionTitle {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+
+  .newslettersGrid {
+    grid-template-columns: 1fr;
   }
   
+  .newsletterCard {
+    max-width: 100%;
+    padding: 25px;
+  }
+}
