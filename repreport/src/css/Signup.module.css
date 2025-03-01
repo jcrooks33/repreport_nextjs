@@ -1,153 +1,236 @@
-/* Background for the entire section */
-.body {
-    background: linear-gradient(135deg, #1e5631, #2e8b57); /* Mimic Morning Brew's gradient */
-    background-size: cover;
-    background-position: center;
+.heroSection {
+    background: linear-gradient(135deg, #1e5631, #2e8b57);
+    position: relative;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 50px 20px;
-    color: white;
-    height: 25vh;
-    position: relative; /* Enable layering for the overlay text */
+    padding: 80px 5%;
+    max-height: 450px;
+    overflow: hidden;
 }
-/* Subtle design overlay (large rotated text or shapes) */
-.body::before {
-    content: "REP"; /* Replace with desired text */
+
+/* Decorative background elements */
+.heroSection::before {
+    content: "REP";
     position: absolute;
-    top: 50%; /* Center vertically */
-    left: 50%; /* Center horizontally */
-    transform: translate(-50%, -50%) rotate(15deg); /* Center and rotate 45 degrees */
-    font-size: 800px; /* Very large font for a bolder effect */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(15deg);
+    font-size: 1000px;
     font-weight: bold;
-    color: rgba(255, 255, 255, 0.05); /* Very light, semi-transparent white */
-    z-index: 0; /* Behind all other content */
-    pointer-events: none; /* Prevent interaction with this layer */
+    color: rgba(255, 255, 255, 0.05);
+    z-index: 1;
+    pointer-events: none;
 }
+
+.heroSection::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    opacity: 0.5;
+    z-index: 1;
+    pointer-events: none;
+}
+
 /* Text container */
-.text {
+.textContainer {
     flex: 1;
-    padding-left: 10vw; /* Adjust horizontal padding */
+    position: relative;
+    z-index: 2;
+    padding-right: 30px;
+    max-width: 550px;
+}
+
+.headline {
+    font-size: 64px;
+    font-weight: 800;
+    color: white;
+    margin: 0 0 20px;
+    line-height: 1.1;
+}
+
+.subheadline {
+    font-size: 20px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 30px;
+}
+
+.learnMoreBtn {
+    background-color: white;
+    color: #2e8b57;
+    border: none;
+    padding: 14px 28px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.learnMoreBtn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Form container */
+.formContainer {
+    flex: 0.8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+.formCard {
+    background-color: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    padding: 30px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.formTitle {
+    color: white;
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0 0 24px;
+    text-align: center;
+}
+
+.inputGroup {
+    margin-bottom: 16px;
+}
+
+.input {
+    width: 100%;
+    padding: 15px;
+    background-color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.input:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5);
+}
+
+.subscribeButton {
+    width: 100%;
+    background-color: #1e5631;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 15px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 8px;
+}
+
+.subscribeButton:hover {
+    background-color: #164224;
+}
+
+.helperText {
+    color: white;
+    font-size: 14px;
+    text-align: center;
+    margin-top: 16px;
+}
+
+.finderLink {
+    color: white;
+    text-decoration: underline;
+    font-weight: 500;
+}
+
+.finderLink:hover {
+    text-decoration: none;
+}
+
+/* Responsive design */
+@media (max-width: 992px) {
+    .heroSection {
+        flex-direction: column;
+        padding: 60px 20px;
+    }
+    
+    .textContainer {
+        max-width: 100%;
+        padding-right: 0;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+    
+    .headline {
+        font-size: 48px;
+    }
+    
+    .formContainer {
+        width: 100%;
+    }
+    
+    .formCard {
+        max-width: 500px;
+    }
+}
+
+@media (max-width: 576px) {
+    .heroSection {
+        padding: 40px 15px;
+    }
+    
+    .headline {
+        font-size: 36px;
+    }
+    
+    .subheadline {
+        font-size: 18px;
+    }
+}
+/* Fix for email input width to match dropdowns */
+.input {
+    width: 100%;
+    box-sizing: border-box;
+    height: 38px; /* Match React-Select height */
+    border-radius: 4px; /* Match React-Select border-radius */
+    padding: 0 10px; /* Match React-Select padding */
+  }
+  
+  /* Fix for vertical centering of text container */
+  .textContainer {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start; /* Align text to the left */
-    max-width: 600px; /* Limit the text width for readability */
-}
-
-/* Main headline (Get in the Know) */
-.text p:first-child {
-    font-size: 48px; /* Larger font size for the headline */
-    font-weight: bold; /* Bold for emphasis */
-    margin: 0 0 20px; /* Space below the headline */
-    text-align: left; /* Ensure left alignment */
-    line-height: 1.2; /* Adjust line height for a clean look */
-}
-
-/* Secondary paragraph */
-.text p:last-child {
-    font-size: 20px; /* Slightly larger font size for better readability */
-    font-weight: 400; /* Regular weight */
-    margin: 0; /* No extra margin */
-    line-height: 1.6; /* Increase line height for readability */
-    text-align: left;
-    color: #f4f4f4; /* Softer white for the secondary text */
-}
-
-
-/* Form container */
-.form {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-right: 5vw;
-}
-
-.formElement {
-    display: grid;
-    gap: 5px; /* Space between form elements */
-    max-width: 400px;
-    width: 100%;
-}
-.input {
-    width: 100%; /* Consistent width for all inputs and dropdowns */
-    height: 50px; /* Uniform height */
-    padding: 10px; /* Inner padding */
-    margin-bottom: 0px; /* Space between elements */
-    border: 1px solid #ccc; /* Consistent border styling */
-    border-radius: 8px; /* Consistent rounded corners */
-    font-size: 16px; /* Font size */
-    box-sizing: border-box; /* Ensure padding and borders are included in the width */
-    outline: none;
-    appearance: none;
-}
-
-
-
-/* Optional: Add a consistent focus style */
-.input:focus {
-    border-color: #007BFF; /* Highlighted border on focus */
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3); /* Subtle glow */
-}
-
-/* Button styling for consistency */
-.button {
-    width: 100%; /* Match width of other form elements */
-    height: 50px;
-    background-color: #222;
-    color: white;
-    font-size: 16px;
-    font-weight: bold;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    z-index: 0;
-    position: relative;
-}
-
-.button:hover {
-    background-color: #333;
-    transform: scale(1.02);
-}
-
-/* Small text below the button */
-.smallText {
-    font-size: 12px; /* Smaller font size */
-    color: white; /* Light gray text */
-    text-align: center;
-    margin-top: 10px; /* Add some space above the text */
-    line-height: 1.5; /* Improve readability */
-}
-
-/* Styling for the link */
-.link {
-    color: white; /* Blue color for the link */
-    text-decoration: none; /* Remove underline by default */
-    font-weight: 500; /* Slightly bold for emphasis */
-    text-decoration: underline;
-}
-/* Add this media query at the bottom (or near the bottom) of your CSS file */
-@media (max-width: 768px) {
-    .body {
-      flex-direction: column;    /* Stack text & form vertically on mobile */
-      height: auto;             /* Let content determine height */
-    }
-  
-    .text {
-      padding-left: 0;          /* Remove large left padding on mobile */
-      margin-bottom: 20px;      /* Space between text block & form */
-      align-items: center;      /* Center text horizontally */
-      text-align: center;
-      max-width: none;          /* Remove max-width constraint so it fits */
-    }
-  
-    .form {
-      padding-right: 0;         /* Remove right padding on mobile */
-      justify-content: center; 
-      align-items: center;
-    }
+    height: 100%;
   }
   
-
+  /* Ensure form elements have consistent styling */
+  .formCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  /* Create a wrapper class for the React-Select components */
+  .selectWrapper {
+    width: 100%;
+  }
+  
+  /* Target the Subscribe button to match width */
+  .subscribeButton {
+    width: 100%;
+    height: 38px; /* Match height of other elements */
+    border-radius: 4px; /* Match border-radius of other elements */
+  }

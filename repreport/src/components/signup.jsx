@@ -6,7 +6,7 @@ const Select = dynamic(() => import('react-select'), { ssr: false });
 
 export default function Signup() {
     const [selectedState, setSelectedState] = useState("");
-// Example: One placeholder "Rep 1 (XX)" for each state
+    // Your existing representatives and states arrays here
 const representatives = {
   "alabama": [
     { label: "Moore, Barry", value: "Moore (AL)" },
@@ -600,131 +600,140 @@ const states = [
   ];
   
 
-  const repsOptions = representatives[selectedState.value]; 
+  const repsOptions = representatives[selectedState?.value]; 
 
-    
-            const customStyles = {
-                menu: (provided) => ({
-                    ...provided,
-                    backgroundColor: "white",
-                    zIndex: 9999,  // or another high value
-                  }),
-                control: (provided) => ({
-                  ...provided,
-                  backgroundColor: "white",
-                  border: "1px solid #ccc",
-                  borderRadius: "8px",
-                  minHeight: "50px",
-                }),
-                singleValue: (provided) => ({
-                  ...provided,
-                  color: "black", // White text
-                }),
-                placeholder: (provided) => ({
-                  ...provided,
-                  color: "black", // White placeholder
-                }),
-                dropdownIndicator: (provided) => ({
-                  ...provided,
-                  color: "black", // White arrow icon
-                }),
-                menu: (provided) => ({
-                  ...provided,
-                  backgroundColor: "white", // Dark background for menu
-                }),
-                option: (provided, state) => ({
-                  ...provided,
-                  backgroundColor: state.isSelected ? "white" : "white",
-                  color: "black",
-                  cursor: "pointer",
-                }),
-              };
+  const customStyles = {
+      control: (provided) => ({
+          ...provided,
+          backgroundColor: "white",
+          border: "none",
+          borderRadius: "8px",
+          minHeight: "54px",
+          boxShadow: "0 2px 4px rgba(0,0,0,0.1)",
+      }),
+      singleValue: (provided) => ({
+          ...provided,
+          color: "#333",
+      }),
+      placeholder: (provided) => ({
+          ...provided,
+          color: "#666",
+          fontSize: "16px",
+      }),
+      dropdownIndicator: (provided) => ({
+          ...provided,
+          color: "#666",
+      }),
+      menu: (provided) => ({
+          ...provided,
+          backgroundColor: "white",
+          boxShadow: "0 4px 12px rgba(0,0,0,0.15)",
+          zIndex: 9999,
+      }),
+      option: (provided, state) => ({
+          ...provided,
+          backgroundColor: state.isSelected ? "#f0f9f0" : "white",
+          color: "#333",
+          cursor: "pointer",
+          "&:hover": {
+              backgroundColor: "#e8f4e8",
+          }
+      }),
+  };
 
-              const [selectedRepValue, setSelectedRepValue] = useState("");
+  const [selectedRepValue, setSelectedRepValue] = useState("");
 
-    return (
-        <div className={styles.body}>
-            <div className={styles.text}>
-                <p>Get in the Know</p>
-                <p>
-                {/*RepReport delivers quick and accurate updates about what your politicians are voting on in DC. Regardless of party.*/}
-                We simplify politics for you. Get personalized and accurate updates about what your politicians are voting on in DC. 
-                </p>
-            </div>
-            <div className={styles.form}>
-                <form
-                    action="https://app.us17.list-manage.com/subscribe/post?u=4c0f3950dc0f76487d3277a17&amp;id=52679f637a&amp;f_id=0068c2e1f0"
-                    method="post"
-                    id="mc-embedded-subscribe-form"
-                    name="mc-embedded-subscribe-form"
-                    className={styles.formElement}
-                    target="_blank"
-                >
-                    <div>
-                        <input
-                            type="email"
-                            name="EMAIL"
-                            id="mce-EMAIL"
-                            placeholder="Email"
-                            required
-                            className={styles.input}
-                            
-                        />
-                    </div>
-                    <div>
-                        <Select
-                        instanceId="state-select"
-                        name='MMERGE8'
-                        options={states}
-                        placeholder="Select your state"
-                        onChange={setSelectedState}
-                        classNamePrefix="react-select"
-                        required
-                        isSearchable
-                        styles={customStyles}
-                    />
-                    </div>
-                    <div>
-                    <Select
-                    instanceId="rep-select"
-                        name='MMERGE9'
-                        options={repsOptions}
-                        onChange={(option) => setSelectedRepValue(option.value)}
-                        placeholder={
-                            selectedState
-                                ? "Select your Representative"
-                                : "Select a State First"
-                        }
-                        isDisabled={!selectedState}
-                        classNamePrefix="react-select"
-                        required
-                        isSearchable
-                        styles={customStyles}
-                    />
-                </div>
-                    <div>
-                        <button
-                            type="submit"
-                            name="subscribe"
-                            id="mc-embedded-subscribe"
-                            className={styles.button}
-                        >
-                            Subscribe
-                        </button>
-                        <p className={styles.smallText}>
-                        Don't know your Rep? Use {' '}
-                            <a
-                                href="https://www.house.gov/representatives/find-your-representative"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className={styles.link}
-                            >
-                        Congress's Rep. Finder
-                            </a>.
-                        </p>
-                    </div>
-                </form>
-            </div>
-        </div>
-    );
+  return (
+      <div className={styles.heroSection}>
+          <div className={styles.textContainer}>
+              <h1 className={styles.headline}>Get in the Know</h1>
+              <p className={styles.subheadline}>
+                  We simplify politics for you. Get personalized and accurate updates about what your politicians are voting on in DC.
+              </p>
+              <button className={styles.learnMoreBtn}>Learn More</button>
+          </div>
+          
+          <div className={styles.formContainer}>
+              <div className={styles.formCard}>
+                  <h2 className={styles.formTitle}>Subscribe for Updates</h2>
+                  <form
+                      action="https://app.us17.list-manage.com/subscribe/post?u=4c0f3950dc0f76487d3277a17&amp;id=52679f637a&amp;f_id=0068c2e1f0"
+                      method="post"
+                      id="mc-embedded-subscribe-form"
+                      name="mc-embedded-subscribe-form"
+                      target="_blank"
+                  >
+                      <div className={styles.inputGroup}>
+                          <input
+                              type="email"
+                              name="EMAIL"
+                              id="mce-EMAIL"
+                              placeholder="Email"
+                              required
+                              className={styles.input}
+                          />
+                      </div>
+                      
+                      <div className={styles.inputGroup}>
+  <div className={styles.selectWrapper}>
+    <Select
+      instanceId="state-select"
+      name='MMERGE8'
+      options={states}
+      placeholder="Select your state"
+      onChange={setSelectedState}
+      classNamePrefix="react-select"
+      required
+      isSearchable
+      styles={customStyles}
+    />
+  </div>
+</div>
+
+<div className={styles.inputGroup}>
+  <div className={styles.selectWrapper}>
+    <Select
+      instanceId="rep-select"
+      name='MMERGE9'
+      options={repsOptions}
+      onChange={(option) => setSelectedRepValue(option.value)}
+      placeholder={
+        selectedState
+          ? "Select your Representative"
+          : "Select a State First"
+      }
+      isDisabled={!selectedState}
+      classNamePrefix="react-select"
+      required
+      isSearchable
+      styles={customStyles}
+    />
+  </div>
+</div>
+                      
+                      <button
+                          type="submit"
+                          name="subscribe"
+                          id="mc-embedded-subscribe"
+                          className={styles.subscribeButton}
+                      >
+                          Subscribe
+                      </button>
+                      
+                      <p className={styles.helperText}>
+                          Don't know your Rep? Use{' '}
+                          <a
+                              href="https://www.house.gov/representatives/find-your-representative"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className={styles.finderLink}
+                          >
+                              Congress's Rep. Finder
+                          </a>.
+                      </p>
+                  </form>
+              </div>
+          </div>
+      </div>
+  );
 }
