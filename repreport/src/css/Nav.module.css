@@ -1,70 +1,118 @@
-/* Styling the navbar container */
+/* Main navbar container */
 .nav {
+  width: 100%;
+  border-bottom: 1px solid #e5e5e5;
+  background-color: white;
+}
+
+.navContent {
   display: flex;
   justify-content: space-between;
-  align-items: center; /* Vertically center content */
-  padding: 10px 70px;
-  background-color: #ffffff; /* White background */
-  font-family: 'Inter', sans-serif;
-  height: 4vh; /* Adjust navbar height */
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px 20px;
 }
 
-/* Styling the logo container */
+/* Logo section styling */
+.logoSection {
+  display: flex;
+  align-items: center;
+}
+
+.logoLink {
+  text-decoration: none;
+  color: inherit;
+}
+
 .logo {
   display: flex;
-  align-items: center; /* Align image and text vertically */
-  gap: 10px; /* Space between the logo and text */
+  align-items: center;
+  gap: 10px;
 }
 
-/* Styling the logo image */
-.img {
-  height: 40px; /* Set a reasonable height for the logo */
-  width: auto; /* Maintain aspect ratio */
-}
-
-/* Styling the individual links */
-.links {
+.logoCircle {
+  width: 40px;
+  height: 40px;
+  background-color: black;
+  border-radius: 50%;
   display: flex;
-  gap: 30px; /* Increase spacing between links */
+  justify-content: center;
+  align-items: center;
 }
 
-.links h1 {
-  font-size: 16px;
-  font-weight: 500;
+.logoLetter {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.logoText {
+  font-size: 24px;
+  font-weight: bold;
   margin: 0;
-  color: #000; /* Black text for links */
-  cursor: pointer;
-  transition: color 0.3s ease; /* Smooth hover effect */
+  color: black;
 }
-.linkItem:link,
-.linkItem:visited {
-  color: black;          /* or your desired color */
+
+/* Links section styling */
+.linksSection {
+  display: flex;
+  gap: 30px;
+}
+
+.linkItem {
   text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  font-weight: 400;
+  transition: color 0.3s;
 }
 
-.linkItem:hover,
-.linkItem:active {
-  text-decoration: underline;
-  color:  #007BFF;          /* or your desired hover color */
+.linkItem:hover {
+  color: #4CAF50;
 }
 
-/* --- NAVBAR --- */
+/* Sign up button styling */
+.signupSection {
+  display: flex;
+}
+
+.signupButton {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+
+.signupButton:hover {
+  background-color: #3e8e41;
+}
+
+/* Responsive design */
 @media (max-width: 768px) {
-  .nav {
-    flex-direction: column;       /* Stack items vertically */
-    height: auto;                /* Let content define height */
-    padding: 10px 30px;          /* Reduce horizontal padding on mobile */
+  .navContent {
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px;
   }
   
-  .logo {
-    margin-bottom: 10px;         /* Space between logo and links on mobile */
+  .linksSection {
+    width: 100%;
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: wrap;
   }
-
-  .links {
-    justify-content: center;     /* Center link group */
+  
+  .linkItem {
+    font-size: 14px;
   }
-
-  .links h1 {
-    font-size: 14px;            /* Slightly smaller text */
+  
+  .signupSection {
+    width: 100%;
+    justify-content: center;
+    margin-top: 10px;
   }
 }
