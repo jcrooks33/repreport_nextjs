@@ -33,12 +33,6 @@ export default function Navbar() {
             About
           </Link>
         </div>
-
-        <div className={styles.signupSection}>
-          <Link href="/signup" className={styles.signupButton}>
-            Sign Up
-          </Link>
-        </div>
       </div>
     </nav>
   );
