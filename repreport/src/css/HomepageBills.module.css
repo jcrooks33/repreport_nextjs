@@ -157,19 +157,30 @@
     transform: translateY(-2px);
   }
   
-  /* Responsive styles */
-  @media (max-width: 992px) {
-    .billsGrid {
-      grid-template-columns: repeat(2, 1fr);
-    }
+  /* Responsive styles - here's where we make changes */
+@media (max-width: 992px) {
+  .billsGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px; /* Increased gap */
+  }
+}
+
+@media (max-width: 768px) {
+  .billsGrid {
+    grid-template-columns: 1fr;
+    gap: 60px; /* Increased gap for mobile */
   }
   
-  @media (max-width: 768px) {
-    .billsGrid {
-      grid-template-columns: 1fr;
-    }
-    
-    .billCard {
-      max-width: 100%;
-    }
+  .billCard {
+    max-width: 100%;
+    margin-bottom: 0; /* Ensure no extra margin from the card itself */
   }
+  
+  .sectionTitle {
+    margin-bottom: 30px; /* Reduced from 40px for better mobile proportions */
+  }
+  
+  .billsSection {
+    padding: 40px 0; /* Slightly reduced padding on mobile */
+  }
+}

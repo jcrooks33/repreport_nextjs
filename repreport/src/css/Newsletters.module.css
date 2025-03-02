@@ -109,10 +109,11 @@
   transform: translateY(-2px);
 }
 
-/* Responsive styles */
+/* Responsive styles for newsletters section */
 @media (max-width: 992px) {
   .newslettersGrid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 30px; /* Increased gap for tablet view */
   }
 }
 
@@ -128,10 +129,13 @@
 
   .newslettersGrid {
     grid-template-columns: 1fr;
+    gap: 60px; /* Increased vertical gap for mobile view */
+    margin: 0; /* Remove any margin that might be squeezing content */
   }
   
   .newsletterCard {
     max-width: 100%;
     padding: 25px;
+    margin-bottom: 0; /* Ensure no extra margin from the card itself */
   }
 }
