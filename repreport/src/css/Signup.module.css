@@ -3,8 +3,8 @@
     position: relative;
     display: flex;
     padding: 80px 5%;
-    max-height: 450px;
-    overflow: hidden;
+    min-height: 450px;
+    overflow: visible;
 }
 
 /* Decorative background elements */
@@ -41,6 +41,10 @@
     z-index: 2;
     padding-right: 30px;
     max-width: 550px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
 }
 
 .headline {
@@ -69,6 +73,7 @@
     cursor: pointer;
     transition: all 0.3s ease;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: fit-content;
 }
 
 .learnMoreBtn:hover {
@@ -83,7 +88,7 @@
     justify-content: center;
     align-items: center;
     position: relative;
-    z-index: 2;
+    z-index: 5;
 }
 
 .formCard {
@@ -95,6 +100,9 @@
     max-width: 400px;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .formTitle {
@@ -106,20 +114,27 @@
 }
 
 .inputGroup {
-    margin-bottom: 16px;
+    margin-bottom: 20px;
+    position: relative;
 }
 
-.input {
+.emailWrapper {
     width: 100%;
+}
+
+.emailInput {
+    width: 100%;
+    height: 54px;
     padding: 15px;
     background-color: white;
     border: none;
     border-radius: 8px;
     font-size: 16px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
 }
 
-.input:focus {
+.emailInput:focus {
     outline: none;
     box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5);
 }
@@ -131,11 +146,15 @@
     border: none;
     border-radius: 8px;
     padding: 15px;
+    height: 54px;
     font-size: 16px;
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
     margin-top: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .subscribeButton:hover {
@@ -159,11 +178,28 @@
     text-decoration: none;
 }
 
+/* Create a wrapper class for the React-Select components */
+.selectWrapper {
+    width: 100%;
+    z-index: 3;
+}
+
+/* Ensure the second dropdown has higher z-index than the first */
+.inputGroup:nth-child(3) .selectWrapper {
+    z-index: 2;
+}
+
+/* Ensure the third form element has a lower z-index */
+.inputGroup:last-of-type {
+    z-index: 1;
+}
+
 /* Responsive design */
 @media (max-width: 992px) {
     .heroSection {
         flex-direction: column;
         padding: 60px 20px;
+        min-height: auto;
     }
     
     .textContainer {
@@ -171,6 +207,7 @@
         padding-right: 0;
         margin-bottom: 40px;
         text-align: center;
+        align-items: center;
     }
     
     .headline {
@@ -199,38 +236,3 @@
         font-size: 18px;
     }
 }
-/* Fix for email input width to match dropdowns */
-.input {
-    width: 100%;
-    box-sizing: border-box;
-    height: 38px; /* Match React-Select height */
-    border-radius: 4px; /* Match React-Select border-radius */
-    padding: 0 10px; /* Match React-Select padding */
-  }
-  
-  /* Fix for vertical centering of text container */
-  .textContainer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 100%;
-  }
-  
-  /* Ensure form elements have consistent styling */
-  .formCard {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-  
-  /* Create a wrapper class for the React-Select components */
-  .selectWrapper {
-    width: 100%;
-  }
-  
-  /* Target the Subscribe button to match width */
-  .subscribeButton {
-    width: 100%;
-    height: 38px; /* Match height of other elements */
-    border-radius: 4px; /* Match border-radius of other elements */
-  }

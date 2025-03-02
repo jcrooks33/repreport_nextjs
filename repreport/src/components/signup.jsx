@@ -664,52 +664,54 @@ const states = [
                       target="_blank"
                   >
                       <div className={styles.inputGroup}>
-                          <input
-                              type="email"
-                              name="EMAIL"
-                              id="mce-EMAIL"
-                              placeholder="Email"
-                              required
-                              className={styles.input}
-                          />
+                          <div className={styles.emailWrapper}>
+                              <input
+                                  type="email"
+                                  name="EMAIL"
+                                  id="mce-EMAIL"
+                                  placeholder="Email"
+                                  required
+                                  className={styles.emailInput}
+                              />
+                          </div>
                       </div>
                       
                       <div className={styles.inputGroup}>
-  <div className={styles.selectWrapper}>
-    <Select
-      instanceId="state-select"
-      name='MMERGE8'
-      options={states}
-      placeholder="Select your state"
-      onChange={setSelectedState}
-      classNamePrefix="react-select"
-      required
-      isSearchable
-      styles={customStyles}
-    />
-  </div>
-</div>
+                        <div className={styles.selectWrapper}>
+                          <Select
+                            instanceId="state-select"
+                            name='MMERGE8'
+                            options={states}
+                            placeholder="Select your state"
+                            onChange={setSelectedState}
+                            classNamePrefix="react-select"
+                            required
+                            isSearchable
+                            styles={customStyles}
+                          />
+                        </div>
+                      </div>
 
-<div className={styles.inputGroup}>
-  <div className={styles.selectWrapper}>
-    <Select
-      instanceId="rep-select"
-      name='MMERGE9'
-      options={repsOptions}
-      onChange={(option) => setSelectedRepValue(option.value)}
-      placeholder={
-        selectedState
-          ? "Select your Representative"
-          : "Select a State First"
-      }
-      isDisabled={!selectedState}
-      classNamePrefix="react-select"
-      required
-      isSearchable
-      styles={customStyles}
-    />
-  </div>
-</div>
+                      <div className={styles.inputGroup}>
+                        <div className={styles.selectWrapper}>
+                          <Select
+                            instanceId="rep-select"
+                            name='MMERGE9'
+                            options={repsOptions}
+                            onChange={(option) => setSelectedRepValue(option.value)}
+                            placeholder={
+                              selectedState
+                                ? "Select your Representative"
+                                : "Select a State First"
+                            }
+                            isDisabled={!selectedState}
+                            classNamePrefix="react-select"
+                            required
+                            isSearchable
+                            styles={customStyles}
+                          />
+                        </div>
+                      </div>
                       
                       <button
                           type="submit"
