@@ -47,10 +47,6 @@ export default function WhyRepReport() {
                 <p>Information tailored to your representatives and interests.</p>
               </div>
             </div>
-            
-            <Link href="/signup" className={styles.subscribeButton}>
-              Subscribe Now
-            </Link>
           </div>
         </div>
       </div>
