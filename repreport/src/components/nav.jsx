@@ -20,6 +20,12 @@ export default function Navbar() {
           <Link href="/" className={styles.linkItem}>
             Home
           </Link>
+          <Link href="/bills" className={styles.linkItem}>
+            Bills
+          </Link>
+          <Link href="/newsletter" className={styles.linkItem}>
+            Newsletters
+          </Link>
           <Link 
             href="https://www.house.gov/representatives/find-your-representative" 
             className={styles.linkItem}
@@ -27,12 +33,6 @@ export default function Navbar() {
             rel="noopener noreferrer"
           >
             Find My Rep
-          </Link>
-          <Link href="/bills" className={styles.linkItem}>
-            Bills
-          </Link>
-          <Link href="/newsletter" className={styles.linkItem}>
-            Newsletters
           </Link>
         </div>
       </div>

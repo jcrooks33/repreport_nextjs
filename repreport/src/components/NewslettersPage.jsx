@@ -79,38 +79,7 @@ export default function NewslettersPage() {
           </p>
         </div>
 
-        <div className={styles.filterSection}>
-          <div className={styles.searchBox}>
-            <input 
-              type="text" 
-              placeholder="Search newsletters" 
-              className={styles.searchInput} 
-            />
-            <button className={styles.searchButton}>
-              Search
-            </button>
-          </div>
-          
-          <div className={styles.filterOptions}>
-            <select className={styles.filterSelect}>
-              <option value="all">All Dates</option>
-              <option value="2025-02">February 2025</option>
-              <option value="2025-01">January 2025</option>
-              <option value="2024-12">December 2024</option>
-              <option value="2024-11">November 2024</option>
-            </select>
-            
-            <select className={styles.filterSelect}>
-              <option value="all">All Topics</option>
-              <option value="healthcare">Healthcare</option>
-              <option value="economy">Economy</option>
-              <option value="environment">Environment</option>
-              <option value="energy">Energy</option>
-              <option value="immigration">Immigration</option>
-              <option value="international">International</option>
-            </select>
-          </div>
-        </div>
+      
 
         <div className={styles.newslettersGrid}>
           {newsletterData.map((newsletter) => (
@@ -146,17 +115,7 @@ export default function NewslettersPage() {
           ))}
         </div>
         
-        <div className={styles.pagination}>
-          <button className={styles.paginationButton}>Previous</button>
-          <div className={styles.pageNumbers}>
-            <span className={`${styles.pageNumber} ${styles.activePageNumber}`}>1</span>
-            <span className={styles.pageNumber}>2</span>
-            <span className={styles.pageNumber}>3</span>
-            <span className={styles.pageNumber}>...</span>
-            <span className={styles.pageNumber}>5</span>
-          </div>
-          <button className={styles.paginationButton}>Next</button>
-        </div>
+        
       </div>
     </div>
   );

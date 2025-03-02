@@ -77,12 +77,16 @@
   cursor: pointer;
 }
 
-/* Bills grid */
+/* Bills grid - fixed layout */
 .billsGrid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 24px;
   margin-bottom: 50px;
+  /* Ensure rows are aligned properly */
+  grid-auto-rows: 1fr;
+  /* Ensure the grid respects container width */
+  width: 100%;
 }
 
 .billCard {
@@ -92,9 +96,12 @@
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
-  height: 100%;
+  /* Set height to auto for content-based sizing */
+  height: auto;
   transition: transform 0.2s, box-shadow 0.2s;
   border: 1px solid #eaeaea;
+  /* Ensure proper sizing with padding included */
+  box-sizing: border-box;
 }
 
 .billCard:hover {
@@ -120,7 +127,18 @@
   font-size: 16px;
   line-height: 1.5;
   margin-bottom: 16px;
+  /* Keep flex-grow but add min-height */
   flex-grow: 1;
+  min-height: 0;
+}
+
+.billFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+  /* Ensure footer spans full width */
+  width: 100%;
 }
 
 .billTags {
@@ -138,12 +156,7 @@
   color: #333;
 }
 
-.billFooter {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: auto;
-}
+
 
 .sponsorInfo {
   display: flex;

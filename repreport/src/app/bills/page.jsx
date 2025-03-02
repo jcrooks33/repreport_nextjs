@@ -13,44 +13,6 @@ export default function BillsPage() {
           </p>
         </div>
 
-        <div className={styles.filterSection}>
-          <div className={styles.searchBox}>
-            <input 
-              type="text" 
-              placeholder="Search bills" 
-              className={styles.searchInput} 
-            />
-            <button className={styles.searchButton}>
-              Search
-            </button>
-          </div>
-          
-          <div className={styles.filterOptions}>
-            <select className={styles.filterSelect}>
-              <option value="all">All Bills</option>
-              <option value="passed">Passed</option>
-              <option value="pending">Pending</option>
-              <option value="failed">Failed</option>
-            </select>
-            
-            <select className={styles.filterSelect}>
-              <option value="all">All Sponsors</option>
-              <option value="republican">Republican</option>
-              <option value="democrat">Democrat</option>
-              <option value="bipartisan">Bipartisan</option>
-            </select>
-            
-            <select className={styles.filterSelect}>
-              <option value="all">All Categories</option>
-              <option value="healthcare">Healthcare</option>
-              <option value="economy">Economy</option>
-              <option value="environment">Environment</option>
-              <option value="defense">Defense</option>
-              <option value="immigration">Immigration</option>
-            </select>
-          </div>
-        </div>
-
         <div className={styles.billsGrid}>
           {billsData.map((bill) => (
             <div key={bill.slug} className={styles.billCard}>
@@ -103,18 +65,6 @@ export default function BillsPage() {
               </div>
             </div>
           ))}
-        </div>
-        
-        <div className={styles.pagination}>
-          <button className={styles.paginationButton}>Previous</button>
-          <div className={styles.pageNumbers}>
-            <span className={`${styles.pageNumber} ${styles.activePageNumber}`}>1</span>
-            <span className={styles.pageNumber}>2</span>
-            <span className={styles.pageNumber}>3</span>
-            <span className={styles.pageNumber}>...</span>
-            <span className={styles.pageNumber}>6</span>
-          </div>
-          <button className={styles.paginationButton}>Next</button>
         </div>
       </div>
     </div>

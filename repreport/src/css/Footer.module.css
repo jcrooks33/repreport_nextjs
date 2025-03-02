@@ -1,193 +1,124 @@
 .footer {
-    background-color: #2e6d47;
-    color: white;
-    padding: 60px 0 20px;
+  background-color: #2e6d47;
+  color: white;
+  padding: 60px 0 20px;
+}
+
+.footerContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Changed from 4 columns to 2 */
+  gap: 40px;
+}
+
+/* Logo section */
+.logoSection {
+  display: flex;
+  flex-direction: column;
+}
+
+.logoWrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+}
+
+.logoCircle {
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.logoLetter {
+  color: #2e6d47;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.logoText {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.tagline {
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0;
+  text-align: center;
+}
+
+/* Links sections */
+.linksSection {
+  display: flex;
+  flex-direction: column;
+}
+
+.sectionTitle {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0 0 20px 0;
+}
+
+.footerNav {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.footerLink {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  transition: opacity 0.2s;
+}
+
+.footerLink:hover {
+  opacity: 0.8;
+}
+
+/* Copyright section */
+.divider {
+  max-width: 1200px;
+  margin: 40px auto 20px;
+  padding: 0 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.copyrightContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.copyright {
+  font-size: 14px;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .footer {
+    padding: 40px 0 20px;
   }
   
   .footerContainer {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-    display: grid;
-    grid-template-columns: 1.5fr 1fr 1fr 1.5fr;
-    gap: 40px;
+    grid-template-columns: 1fr;
+    gap: 30px;
   }
-  
-  /* Logo section */
-  .logoSection {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .logoContainer {
-    display: flex;
-    align-items: center;
-    margin-bottom: 16px;
-  }
-  
-  .logoCircle {
-    width: 40px;
-    height: 40px;
-    background-color: white;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-right: 10px;
-  }
-  
-  .logoLetter {
-    color: #2e6d47;
-    font-size: 24px;
-    font-weight: bold;
-  }
-  
-  .logoText {
-    font-size: 24px;
-    font-weight: bold;
-    margin: 0;
-  }
-  
-  .tagline {
-    font-size: 16px;
-    line-height: 1.5;
-    margin: 0;
-  }
-  
-  /* Links sections */
-  .linksSection, .resourcesSection {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .sectionTitle {
-    font-size: 18px;
-    font-weight: bold;
-    margin: 0 0 20px 0;
-  }
-  
-  .footerNav {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-  }
-  
-  .footerLink {
-    color: white;
-    text-decoration: none;
-    font-size: 16px;
-    transition: opacity 0.2s;
-  }
-  
-  .footerLink:hover {
-    opacity: 0.8;
-  }
-  
-  /* Subscribe section */
-  .subscribeSection {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .subscribeText {
-    font-size: 16px;
-    margin: 0 0 20px 0;
-  }
-  
-  .subscribeForm {
-    display: flex;
-    gap: 10px;
-  }
-  
-  .emailInput {
-    flex: 1;
-    padding: 12px 15px;
-    border: none;
-    border-radius: 4px;
-    font-size: 16px;
-    background-color: rgba(255, 255, 255, 0.2);
-    color: white;
-  }
-  
-  .emailInput::placeholder {
-    color: rgba(255, 255, 255, 0.7);
-  }
-  
-  .emailInput:focus {
-    outline: none;
-    background-color: rgba(255, 255, 255, 0.25);
-  }
-  
-  .joinButton {
-    padding: 12px 20px;
-    background-color: white;
-    color: #2e6d47;
-    border: none;
-    border-radius: 4px;
-    font-size: 16px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background-color 0.2s, transform 0.2s;
-  }
-  
-  .joinButton:hover {
-    background-color: #f0f0f0;
-    transform: translateY(-2px);
-  }
-  
-  /* Copyright section */
-  .divider {
-    max-width: 1200px;
-    margin: 40px auto 20px;
-    padding: 0 20px;
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
-  }
-  
-  .copyrightContainer {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-    text-align: center;
-  }
-  
-  .copyright {
-    font-size: 14px;
-    margin: 0;
-    color: rgba(255, 255, 255, 0.8);
-  }
-  
-  /* Responsive styles */
-  @media (max-width: 992px) {
-    .footerContainer {
-      grid-template-columns: 1fr 1fr;
-      gap: 40px 20px;
-    }
-    
-    .logoSection {
-      grid-column: span 2;
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .footer {
-      padding: 40px 0 20px;
-    }
-    
-    .footerContainer {
-      grid-template-columns: 1fr;
-      gap: 30px;
-    }
-    
-    .logoSection {
-      grid-column: span 1;
-    }
-    
-    .subscribeForm {
-      flex-direction: column;
-      gap: 10px;
-    }
-    
-    .joinButton {
-      width: 100%;
-    }
-  }
+}
