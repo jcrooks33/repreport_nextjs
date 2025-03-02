@@ -2,6 +2,7 @@ import styles from '../css/About.module.css';
 
 export default function About() {
   return (
+    <div className={styles.aboutBackground}>
     <section className={styles.aboutSection}>
       {/* Left side: How it works */}
       <div className={styles.column}>
@@ -97,5 +98,6 @@ export default function About() {
         </div>
       </div>
     </section>
+    </div>
   );
 }
