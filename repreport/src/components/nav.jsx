@@ -34,9 +34,6 @@ export default function Navbar() {
           <Link href="/newsletter" className={styles.linkItem}>
             Newsletters
           </Link>
-          <Link href="/about" className={styles.linkItem}>
-            About
-          </Link>
         </div>
       </div>
     </nav>

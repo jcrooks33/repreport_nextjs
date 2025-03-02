@@ -2,9 +2,28 @@
     background: linear-gradient(135deg, #1e5631, #2e8b57);
     position: relative;
     display: flex;
+    align-items: center; /* Add this to center children vertically */
     padding: 80px 5%;
-    min-height: 450px;
+    min-height: 500px; /* Increase minimum height slightly */
     overflow: visible;
+}
+
+.textContainer {
+    flex: 1;
+    position: relative;
+    z-index: 2;
+    padding-right: 30px;
+    padding-top: 0; /* Ensure no extra padding */
+    padding-bottom: 0; /* Ensure no extra padding */
+    margin-top: 0; /* Ensure no extra margin */
+    margin-bottom: 0; /* Ensure no extra margin */
+    max-width: 550px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 300px; /* Set explicit minimum height */
+    height: 100%;
 }
 
 /* Decorative background elements */
@@ -32,19 +51,6 @@
     opacity: 0.5;
     z-index: 1;
     pointer-events: none;
-}
-
-/* Text container */
-.textContainer {
-    flex: 1;
-    position: relative;
-    z-index: 2;
-    padding-right: 30px;
-    max-width: 550px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 100%;
 }
 
 .headline {

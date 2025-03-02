@@ -650,7 +650,6 @@ const states = [
               <p className={styles.subheadline}>
                   We simplify politics for you. Get personalized and accurate updates about what your politicians are voting on in DC.
               </p>
-              <button className={styles.learnMoreBtn}>Learn More</button>
           </div>
           
           <div className={styles.formContainer}>
