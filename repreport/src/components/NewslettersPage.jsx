@@ -3,6 +3,20 @@ import styles from '@/css/NewslettersPage.module.css';
 
 // You can replace this with an import from your data file
 const newsletterData = [
+    {
+      slug: 'doe-sba-rural-medal-budget-acts',
+      title: 'DOE and SBA Research, Rural Small Business Resilience, Medal of Honor, and 2025 Congressional Budget Acts',
+      date: '2/27/25',
+      description: '',
+      topics: ['Small Business', 'Budget']
+    },
+  {
+    slug: 'small-businesses-fraud-and-advocacy-acts',
+    title: 'Assisting Small Businesses Not Fraudsters, Small Business Advocacy Improvements, and SPUR Acts',
+    date: '2/25/25',
+    description: '',
+    topics: ['Small Business']
+  },
   {
     slug: 'midnight-agent-raul-gonzalez-acts',
     title: 'Midnight Rules Relief and Agent Raul Gonzalez Officer Safety Acts',
@@ -25,7 +39,7 @@ const newsletterData = [
     topics: ['Healthcare', 'Energy']
   },
   {
-    slug: 'alaska-nutria-acts',
+    slug: 'nutria-alaska-acts',
     title: 'Alaska and Nutria Acts',
     date: '2/5/25',
     description: 'Updates on Alaskan land management policies and invasive species control measures.',
@@ -52,20 +66,6 @@ const newsletterData = [
     description: 'A complete breakdown of the economic relief package and accompanying legislation.',
     topics: ['Economy', 'Tax Policy']
   },
-  {
-    slug: 'veteran-care-immigration-acts',
-    title: 'Veterans Care and Border Security Acts',
-    date: '1/10/25',
-    description: 'Examining recent bills addressing veteran healthcare and immigration policy changes.',
-    topics: ['Veterans', 'Immigration']
-  },
-  {
-    slug: 'infrastructure-digital-privacy-acts',
-    title: 'Infrastructure Development and Digital Privacy Protection Acts',
-    date: '1/3/25',
-    description: 'Analysis of new infrastructure funding initiatives and online privacy regulations.',
-    topics: ['Infrastructure', 'Technology']
-  }
 ];
 
 export default function NewslettersPage() {

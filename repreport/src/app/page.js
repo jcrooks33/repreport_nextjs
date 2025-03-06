@@ -9,6 +9,16 @@ import WhyRepReport from '@/components/WhyRepReport';
 // Just an example array of objects – in reality, you might fetch this from a server
 const newsletterData = [
   {
+    slug: 'doe-sba-rural-medal-budget-acts',
+    title: 'DOE and SBA Research, Rural Small Business Resilience, Medal of Honor, and 2025 Congressional Budget Acts',
+    date: '2/27/25',
+  },
+  {
+    slug: 'small-businesses-fraud-and-advocacy-acts',
+    title: 'Assisting Small Businesses Not Fraudsters, Small Business Advocacy Improvements, and SPUR Acts',
+    date: '2/25/25',
+  },
+  {
     slug: 'midnight-agent-raul-gonzalez-acts',
     title: 'Midnight Rules Relief and Agent Raul Gonzalez Officer Safety Acts',
     date: '2/14/25'

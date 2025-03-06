@@ -1,6 +1,680 @@
 // src/data/newslettersData.js
 
 export const newsletterData = {
+  "doe-sba-rural-medal-budget-acts":{
+    title:"DOE and SBA Research, Rural Small Business Resilience, Medal of Honor, and 2025 Congressional Budget Acts",
+    bills: [
+    ],
+    html:`<!DOCTYPE html>
+    <html lang="en">
+      <body style="margin:0; padding:0; background-color: #f5f5f5;">
+        <table class="wrapper" width="100%" cellspacing="0" cellpadding="0" style="background-color: #f5f5f5;">
+          <tr>
+            <td align="center">
+              <table class="main-content" width="600" cellspacing="0" cellpadding="0" style="background-color: #ffffff;">
+                <!-- HEADER -->
+                <!-- Your table row for the header -->
+                <tr>
+                  <td style="padding: 20px; text-align: center; background-color: #ffffff;">
+                    <!-- Main headline -->
+                    <div style="font-family: 'Times New Roman', serif; font-size: 32px; font-weight: bold; color: #000;">
+                      📬 Your Rep. Has Voted! 
+                    </div>
+                    <!-- Smaller byline below -->
+                    <div style="font-family: 'Times New Roman', serif; font-size: 14px; font-weight: normal; color: #000; margin-top: 5px;">
+                      By RepReport · Feb 27, 2025
+                    </div>
+    </td></tr><tr>
+      <td style="padding: 0;">
+        <div style="height: 5px; background-color: #f5f5f5; line-height: 5px; font-size: 1px;">&nbsp;</div>
+      </td>
+    </tr>
+            
+                    <tr>
+          <td class="body-section" style="font-family: 'Times New Roman', serif; line-height: 1.8; padding: 20px 30px;">
+            <p class="spaced" style="line-height: 1.8; padding: 0; font-size: 20px; margin: 0; color: #000; text-decoration: none; margin-bottom: 20px;">Good afternoon,</p>
+            <p style="line-height: 1.8; padding: 0; font-size: 20px; margin: 0; color: #000; text-decoration: none;">Your Congressional Rep. has just voted on the following bills: </p>
+            <table style="width: 100%; border-spacing: 0; margin-left: 20px;"><tr><td style="padding: 5px 0; color: #000; font-size: 20px;">• <i>DOE and SBA Research Act</i></td></tr><tr><td style="padding: 5px 0; color: #000; font-size: 20px;">• <i>Rural Small Business Resilience Act</i></td></tr><tr><td style="padding: 5px 0; color: #000; font-size: 20px;">• <i>Medal of Honor Act</i></td></tr><tr><td style="padding: 5px 0; color: #000; font-size: 20px;">• <i>2025 Congressional Budget</i></td></tr></table>
+    
+            <div class="hero-image" style="margin-top: 20px;">
+              <!-- Replace with your own hosted image URL or Base64 data -->
+              <img src="https://mcusercontent.com/4c0f3950dc0f76487d3277a17/images/bfea30bf-72b4-b783-b164-acbfbc15ab9d.jpg" alt="Embedded Image" style="display: block; width: 100%; height: auto;" height="auto">
+            </div>
+    </td></tr><tr>
+      <td style="padding: 0;">
+        <div style="height: 5px; background-color: #f5f5f5; line-height: 5px; font-size: 1px;">&nbsp;</div>
+      </td>
+    </tr>
+    
+    
+    
+    
+        <!-- Single Bill Section -->
+        <tr>
+          <td class="body-section" style="font-family: 'Times New Roman', serif; line-height: 1.8; padding: 20px 30px;">
+            <h3 style="margin: 0; padding: 0; font-size: 20px; text-decoration: underline; font-weight: bold;">DOE and SBA Research Act Summary:</h3>
+            <ul class="bill-summary" style="margin: 10px 0;">
+              <li style="font-size: 17px; line-height: 1.8; margin: 0 0 10px 0;">Requires the Department of Energy (DOE) and the Small Business Administration (SBA) to collaborate on research and development projects that align with both agencies' goals.</li>
+              <li style="font-size: 17px; line-height: 1.8; margin: 0 0 10px 0;">Includes small businesses (firms with fewer than 500 employees) in these research activities to help them contribute to and benefit from innovation efforts.</li>
+              <li style="font-size: 17px; line-height: 1.8; margin: 0 0 10px 0;">Mandates a report to Congress within two years, detailing progress, coordination efforts, research achievements, and future opportunities for collaboration.</li>
+           </ul>
+            <h3 style="margin: 0; padding: 0; font-size: 20px; text-decoration: underline; font-weight: bold;">"Pork"</h3>
+            <ul class="bill-summary" style="margin: 10px 0;">
+              <li style="font-size: 17px; line-height: 1.8; margin: 0 0 10px 0;">No pork in this bill.</li>
+            </ul>
+    
+            <p style="line-height: 1.8; padding: 0; font-size: 20px; margin: 0; color: #000; text-decoration: none; margin-top: 20px;" "="">
+              Rep. &lt;&lt; Test Representative &gt;&gt;
+              voted: <span>&lt;&lt; Test REPVOTE1 &gt;&gt;</span>. House Result: <span style="color:green">Passed</span>
+            </p>
+          </td>
+        </tr>
+         <!-- New Graphic Section -->
+    
+               <tr>
+          <td class="body-section" style="font-family: 'Times New Roman', serif; line-height: 1.8; padding: 20px 30px;">
+            <div style="text-align: center; margin: 20px;">
+              <h3 style="margin: 0; padding: 0; font-size: 24px; font-weight: bold; margin-bottom: 10px;">Partisan Breakdown</h3>
+              <p style="
+          background-color: #f9f9f9; 
+          border-left: 4px solid red; 
+          border-right: 4px solid red; 
+          padding: 10px; 
+          font-size: 17px; 
+          margin-top: 20px;
+        ">
+          🐘 Republicans: <b>98.6%</b> Yea, <b>1.4%</b> Nay
+          <span style="color:green; font-weight: bold;">
+          </span>
+        </p>
+        <p style="
+        background-color: #f9f9f9; 
+        border-left: 4px solid blue; 
+        border-right: 4px solid blue; 
+        padding: 10px; 
+        font-size: 17px; 
+        margin-top: 20px;
+      ">
+        🐴 Democrats: <b>98.6%</b> Yea, <b>0.0%</b> Nay
+        <span style="color:green; font-weight: bold;">
+        </span>
+      </p>
+            </div>
+    </td></tr><tr>
+      <td style="padding: 0;">
+        <div style="height: 5px; background-color: #f5f5f5; line-height: 5px; font-size: 1px;">&nbsp;</div>
+      </td>
+    </tr>
+    
+    
+        
+    
+        <!-- Single Bill Section -->
+        <tr>
+          <td class="body-section" style="font-family: 'Times New Roman', serif; line-height: 1.8; padding: 20px 30px;">
+            <h3 style="margin: 0; padding: 0; font-size: 20px; text-decoration: underline; font-weight: bold;">Rural Small Business Resilience Act Summary:</h3>
+            <ul class="bill-summary" style="margin: 10px 0;">
+              <li style="font-size: 17px; line-height: 1.8; margin: 0 0 10px 0;">Requires the Small Business Administration (SBA) to improve access to disaster assistance for individuals in rural areas (regions with low population density) after a disaster declaration.</li>
+              <li style="font-size: 17px; line-height: 1.8; margin: 0 0 10px 0;">Mandates targeted outreach and marketing to ensure rural communities are aware of and can fully access available assistance.</li>
+              <li style="font-size: 17px; line-height: 1.8; margin: 0 0 10px 0;">Corrects a technical numbering issue in the Small Business Act without changing its substance.</li>
+           </ul>
+            <h3 style="margin: 0; padding: 0; font-size: 20px; text-decoration: underline; font-weight: bold;">"Pork"</h3>
+            <ul class="bill-summary" style="margin: 10px 0;">
+              <li style="font-size: 17px; line-height: 1.8; margin: 0 0 10px 0;">No pork in this bill.</li>
+            </ul>
+    
+            <p style="line-height: 1.8; padding: 0; font-size: 20px; margin: 0; color: #000; text-decoration: none; margin-top: 20px;" "="">
+              Rep. &lt;&lt; Test Representative &gt;&gt;
+              voted: <span>&lt;&lt; Test REPVOTE2 &gt;&gt;</span>. House Result: <span style="color:green">Passed</span>
+            </p>
+          </td>
+        </tr>
+         <!-- New Graphic Section -->
+    
+               <tr>
+          <td class="body-section" style="font-family: 'Times New Roman', serif; line-height: 1.8; padding: 20px 30px;">
+            <div style="text-align: center; margin: 20px;">
+              <h3 style="margin: 0; padding: 0; font-size: 24px; font-weight: bold; margin-bottom: 10px;">Partisan Breakdown</h3>
+              <p style="
+          background-color: #f9f9f9; 
+          border-left: 4px solid red; 
+          border-right: 4px solid red; 
+          padding: 10px; 
+          font-size: 17px; 
+          margin-top: 20px;
+        ">
+          🐘 Republicans: <b>93.1%</b> Yea, <b>3.7%</b> Nay
+          <span style="color:green; font-weight: bold;">
+          </span>
+        </p>
+        <p style="
+        background-color: #f9f9f9; 
+        border-left: 4px solid blue; 
+        border-right: 4px solid blue; 
+        padding: 10px; 
+        font-size: 17px; 
+        margin-top: 20px;
+      ">
+        🐴 Democrats: <b>98.6%</b> Yea, <b>0.0%</b> Nay
+        <span style="color:green; font-weight: bold;">
+        </span>
+      </p>
+            </div>
+    </td></tr><tr>
+      <td style="padding: 0;">
+        <div style="height: 5px; background-color: #f5f5f5; line-height: 5px; font-size: 1px;">&nbsp;</div>
+      </td>
+    </tr>
+    
+    
+        
+    
+        <!-- Single Bill Section -->
+        <tr>
+          <td class="body-section" style="font-family: 'Times New Roman', serif; line-height: 1.8; padding: 20px 30px;">
+            <h3 style="margin: 0; padding: 0; font-size: 20px; text-decoration: underline; font-weight: bold;">Medal of Honor Act Summary:</h3>
+            <ul class="bill-summary" style="margin: 10px 0;">
+              <li style="font-size: 17px; line-height: 1.8; margin: 0 0 10px 0;">Increases the monthly Department of Veterans Affairs (VA) special pension for Medal of Honor (highest U.S. military decoration) recipients from $1,406.73 to $8,333.33.</li>
+              <li style="font-size: 17px; line-height: 1.8; margin: 0 0 10px 0;">Provides a monthly pension of $1,406.73 (subject to adjustments) for surviving spouses of Medal of Honor recipients.</li>
+              <li style="font-size: 17px; line-height: 1.8; margin: 0 0 10px 0;">Honors the Medal of Honor as the nation's highest military decoration and acknowledges recipients' heroism beyond the call of duty.</li>
+           </ul>
+            <h3 style="margin: 0; padding: 0; font-size: 20px; text-decoration: underline; font-weight: bold;">"Pork"</h3>
+            <ul class="bill-summary" style="margin: 10px 0;">
+              <li style="font-size: 17px; line-height: 1.8; margin: 0 0 10px 0;">No pork in this bill.</li>
+            </ul>
+    
+            <p style="line-height: 1.8; padding: 0; font-size: 20px; margin: 0; color: #000; text-decoration: none; margin-top: 20px;" "="">
+              Rep. &lt;&lt; Test Representative &gt;&gt;
+              voted: <span>&lt;&lt; Test REPVOTE3 &gt;&gt;</span>. House Result: <span style="color:green">Passed</span>
+            </p>
+          </td>
+        </tr>
+         <!-- New Graphic Section -->
+    
+               <tr>
+          <td class="body-section" style="font-family: 'Times New Roman', serif; line-height: 1.8; padding: 20px 30px;">
+            <div style="text-align: center; margin: 20px;">
+              <h3 style="margin: 0; padding: 0; font-size: 24px; font-weight: bold; margin-bottom: 10px;">Partisan Breakdown</h3>
+              <p style="
+          background-color: #f9f9f9; 
+          border-left: 4px solid red; 
+          border-right: 4px solid red; 
+          padding: 10px; 
+          font-size: 17px; 
+          margin-top: 20px;
+        ">
+          🐘 Republicans: <b>97.7%</b> Yea, <b>0.0%</b> Nay
+          <span style="color:green; font-weight: bold;">
+          </span>
+        </p>
+        <p style="
+        background-color: #f9f9f9; 
+        border-left: 4px solid blue; 
+        border-right: 4px solid blue; 
+        padding: 10px; 
+        font-size: 17px; 
+        margin-top: 20px;
+      ">
+        🐴 Democrats: <b>98.1%</b> Yea, <b>0.0%</b> Nay
+        <span style="color:green; font-weight: bold;">
+        </span>
+      </p>
+            </div>
+    </td></tr><tr>
+      <td style="padding: 0;">
+        <div style="height: 5px; background-color: #f5f5f5; line-height: 5px; font-size: 1px;">&nbsp;</div>
+      </td>
+    </tr>
+    
+    
+        
+    
+        <!-- Single Bill Section -->
+        <tr>
+          <td class="body-section" style="font-family: 'Times New Roman', serif; line-height: 1.8; padding: 20px 30px;">
+            <h3 style="margin: 0; padding: 0; font-size: 20px; text-decoration: underline; font-weight: bold;">2025 Congressional Budget Summary:</h3>
+            <ul class="bill-summary" style="margin: 10px 0;">
+              <li style="font-size: 17px; line-height: 1.8; margin: 0 0 10px 0;">Establishes the 2025 federal budget resolution, detailing spending, revenue, deficit, and debt targets through 2034.</li>
+              <li style="font-size: 17px; line-height: 1.8; margin: 0 0 10px 0;">Directs House committees to propose measures under reconciliation (fast-track budget process) and raises the statutory debt limit (legal borrowing cap) by $4 trillion.</li>
+              <li style="font-size: 17px; line-height: 1.8; margin: 0 0 10px 0;">Sets policy to cut mandatory spending by $2 trillion, boost economic growth, reduce regulations, and limit government.</li>
+           </ul>
+            <h3 style="margin: 0; padding: 0; font-size: 20px; text-decoration: underline; font-weight: bold;">"Pork"</h3>
+            <ul class="bill-summary" style="margin: 10px 0;">
+              <li style="font-size: 17px; line-height: 1.8; margin: 0 0 10px 0;">No pork in this bill.</li>
+            </ul>
+    
+            <p style="line-height: 1.8; padding: 0; font-size: 20px; margin: 0; color: #000; text-decoration: none; margin-top: 20px;" "="">
+              Rep. &lt;&lt; Test Representative &gt;&gt;
+              voted: <span>&lt;&lt; Test REPVOTE4 &gt;&gt;</span>. House Result: <span style="color:green">Passed</span>
+            </p>
+          </td>
+        </tr>
+         <!-- New Graphic Section -->
+    
+               <tr>
+          <td class="body-section" style="font-family: 'Times New Roman', serif; line-height: 1.8; padding: 20px 30px;">
+            <div style="text-align: center; margin: 20px;">
+              <h3 style="margin: 0; padding: 0; font-size: 24px; font-weight: bold; margin-bottom: 10px;">Partisan Breakdown</h3>
+              <p style="
+          background-color: #f9f9f9; 
+          border-left: 4px solid red; 
+          border-right: 4px solid red; 
+          padding: 10px; 
+          font-size: 17px; 
+          margin-top: 20px;
+        ">
+          🐘 Republicans: <b>99.5%</b> Yea, <b>0.5%</b> Nay
+          <span style="color:green; font-weight: bold;">
+          </span>
+        </p>
+        <p style="
+        background-color: #f9f9f9; 
+        border-left: 4px solid blue; 
+        border-right: 4px solid blue; 
+        padding: 10px; 
+        font-size: 17px; 
+        margin-top: 20px;
+      ">
+        🐴 Democrats: <b>0.0%</b> Yea, <b>99.5%</b> Nay
+        <span style="color:green; font-weight: bold;">
+        </span>
+      </p>
+            </div>
+    </td></tr><tr>
+      <td style="padding: 0;">
+        <div style="height: 5px; background-color: #f5f5f5; line-height: 5px; font-size: 1px;">&nbsp;</div>
+      </td>
+    </tr>
+    
+    
+                        <!-- FOOTER / SIGNUP SECTION -->
+    
+                <tr>
+      <td class="body-section" style="font-family: 'Times New Roman', serif; line-height: 1.8; padding: 20px 30px;">
+          <div style="font-size: 17px; line-height: 1.8; margin: 0 0 10px 0; text-align: center; font-style:italic;">Thank you for reading RepReport! Please help friends and family get in the know by forwarding them this email, or having them sign up <a href="https://repreport.org" style="color:blue !important;">here</a>.</div>
+      </td>
+    </tr>
+    
+    <tr>
+      <td style="padding: 0;">
+        <div style="height: 5px; background-color: #f5f5f5; line-height: 5px; font-size: 1px;">&nbsp;</div>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="body-section" style="font-family: 'Times New Roman', serif; line-height: 1.8; padding: 20px 30px;">
+        <div style="font-size: 17px; line-height: 1.8; margin: 0 0 10px 0; text-align: center; font-style:italic;">If you have feedback for us, please feel free to provide it <a href="https://forms.gle/eJ1V4UiTmZM9r58d6" style="color:blue !important;">here</a>.</div>
+      </td>
+    </tr>
+    
+    <tr>
+    <td style="padding: 0;">
+    <div style="height: 5px; background-color: #f5f5f5; line-height: 5px; font-size: 1px;">&nbsp;</div>
+    </td>
+    </tr>
+                <tr>
+                  <td class="body-section" style="font-family: 'Times New Roman', serif; line-height: 1.8; padding: 20px 30px; text-align: center;" align="center">
+                    <p style="line-height: 1.8; padding: 0; margin: 0; text-decoration: none; text-align: center; margin-top: 20px; font-size: 14px; color: black;">
+      Forwarded this? <a href="https://repreport.org/" style="text-decoration: underline; color: #007bff; font-weight: bold;">Sign Up Here</a>
+    </p>
+    <p style="line-height: 1.8; padding: 0; margin: 0; text-decoration: none; text-align: center; font-size: 14px; color: black;">
+      <a href="https://repreport.org/" style="text-decoration: none; color: #000;">https://repreport.org/</a>
+    </p>
+    
+                  </td>
+                </tr>
+                <tr>
+                  <td class="footer" style="text-align: center; font-size: 14px; color: #666666; padding: 10px;" align="center">
+                    &copy; 2025 RepReport. All rights reserved.
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+                    <center>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <table border="0" cellpadding="0" cellspacing="0" width="100%" id="canspamBarWrapper" style="background-color:#FFFFFF; border-top:1px solid #E5E5E5;">
+                        <tr>
+                            <td align="center" valign="top" style="padding-top:20px; padding-bottom:20px;">
+                                <table border="0" cellpadding="0" cellspacing="0" id="canspamBar">
+                                    <tr>
+                                        <td align="center" valign="top" style="color:#606060; font-family:Helvetica, Arial, sans-serif; font-size:11px; line-height:150%; padding-right:20px; padding-bottom:5px; padding-left:20px; text-align:center;">
+                                            This email was sent to <a href="mailto:&lt;&lt; Test Email Address &gt;&gt;" target="_blank" style="color:#404040 !important;">&lt;&lt; Test Email Address &gt;&gt;</a>
+                                            <br>
+                                            <a href="https://repreport.us17.list-manage.com/about?u=4c0f3950dc0f76487d3277a17&id=52679f637a&e=[UNIQID]&c=93b6e01305" target="_blank" style="color:#404040 !important;"><em>why did I get this?</em></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://repreport.us17.list-manage.com/unsubscribe?u=4c0f3950dc0f76487d3277a17&id=52679f637a&t=b&e=[UNIQID]&c=93b6e01305" style="color:#404040 !important;">unsubscribe from this list</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://repreport.us17.list-manage.com/profile?u=4c0f3950dc0f76487d3277a17&id=52679f637a&e=[UNIQID]&c=93b6e01305" style="color:#404040 !important;">update subscription preferences</a>
+                                            <br>
+                                            RepReport &middot; 9169 W State St #3391 &middot; Garden City, ID 83714 &middot; USA
+                                            <br>
+                                            <br>
+                                            
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                    <style type="text/css">
+                        @media only screen and (max-width: 480px){
+                            table#canspamBar td{font-size:14px !important;}
+                            table#canspamBar td a{display:block !important; margin-top:10px !important;}
+                        }
+                    </style>
+                </center></body>
+    </html>`
+  },
+  "small-businesses-fraud-and-advocacy-acts":{
+    title:"Assisting Small Businesses Not Fraudsters, Small Business Advocacy Improvements, and SPUR Acts",
+    bills: [
+    ],
+    html:`<!DOCTYPE html>
+    <html lang="en">
+      <body style="margin:0; padding:0; background-color: #f5f5f5;">
+        <table class="wrapper" width="100%" cellspacing="0" cellpadding="0" style="background-color: #f5f5f5;">
+          <tr>
+            <td align="center">
+              <table class="main-content" width="600" cellspacing="0" cellpadding="0" style="background-color: #ffffff;">
+                <!-- HEADER -->
+                <!-- Your table row for the header -->
+                <tr>
+                  <td style="padding: 20px; text-align: center; background-color: #ffffff;">
+                    <!-- Main headline -->
+                    <div style="font-family: 'Times New Roman', serif; font-size: 32px; font-weight: bold; color: #000;">
+                      📬 Your Rep. Has Voted! 
+                    </div>
+                    <!-- Smaller byline below -->
+                    <div style="font-family: 'Times New Roman', serif; font-size: 14px; font-weight: normal; color: #000; margin-top: 5px;">
+                      By RepReport · Feb 25, 2025
+                    </div>
+    </td></tr><tr>
+      <td style="padding: 0;">
+        <div style="height: 5px; background-color: #f5f5f5; line-height: 5px; font-size: 1px;">&nbsp;</div>
+      </td>
+    </tr>
+            
+                    <tr>
+          <td class="body-section" style="font-family: 'Times New Roman', serif; line-height: 1.8; padding: 20px 30px;">
+            <p class="spaced" style="line-height: 1.8; padding: 0; font-size: 20px; margin: 0; color: #000; text-decoration: none; margin-bottom: 20px;">Good morning,</p>
+            <p style="line-height: 1.8; padding: 0; font-size: 20px; margin: 0; color: #000; text-decoration: none;">Your Congressional Rep. has just voted on the following bills: </p>
+            <table style="width: 100%; border-spacing: 0; margin-left: 20px;"><tr><td style="padding: 5px 0; color: #000; font-size: 20px;">• <i>Assisting Small Businesses Not Fraudsters Act</i></td></tr><tr><td style="padding: 5px 0; color: #000; font-size: 20px;">• <i>Small Business Advocacy Improvements Act of 2025</i></td></tr><tr><td style="padding: 5px 0; color: #000; font-size: 20px;">• <i>SPUR Act</i></td></tr></table>
+    
+            <div class="hero-image" style="margin-top: 20px;">
+              <!-- Replace with your own hosted image URL or Base64 data -->
+              <img src="https://mcusercontent.com/4c0f3950dc0f76487d3277a17/images/bfea30bf-72b4-b783-b164-acbfbc15ab9d.jpg" alt="Embedded Image" style="display: block; width: 100%; height: auto;" height="auto">
+            </div>
+    </td></tr><tr>
+      <td style="padding: 0;">
+        <div style="height: 5px; background-color: #f5f5f5; line-height: 5px; font-size: 1px;">&nbsp;</div>
+      </td>
+    </tr>
+    
+    
+    
+    
+        <!-- Single Bill Section -->
+        <tr>
+          <td class="body-section" style="font-family: 'Times New Roman', serif; line-height: 1.8; padding: 20px 30px;">
+            <h3 style="margin: 0; padding: 0; font-size: 20px; text-decoration: underline; font-weight: bold;">Assisting Small Businesses Not Fraudsters Act Summary:</h3>
+            <ul class="bill-summary" style="margin: 10px 0;">
+              <li style="font-size: 17px; line-height: 1.8; margin: 0 0 10px 0;">Prohibits individuals finally convicted (conviction with no remaining appeals) of fraud from receiving assistance from the SBA (Small Business Administration).</li>
+              <li style="font-size: 17px; line-height: 1.8; margin: 0 0 10px 0;">Bans small businesses with such individuals as key associates from most SBA funding, except certain disaster loans.</li>
+              <li style="font-size: 17px; line-height: 1.8; margin: 0 0 10px 0;">Exempts existing contracts from these restrictions.</li>
+           </ul>
+            <h3 style="margin: 0; padding: 0; font-size: 20px; text-decoration: underline; font-weight: bold;">"Pork"</h3>
+            <ul class="bill-summary" style="margin: 10px 0;">
+              <li style="font-size: 17px; line-height: 1.8; margin: 0 0 10px 0;">No pork in this bill.</li>
+            </ul>
+    
+            <p style="line-height: 1.8; padding: 0; font-size: 20px; margin: 0; color: #000; text-decoration: none; margin-top: 20px;" "="">
+              Rep. &lt;&lt; Test Representative &gt;&gt;
+              voted: <span>&lt;&lt; Test REPVOTE1 &gt;&gt;</span>. House Result: <span style="color:green">Passed</span>
+            </p>
+          </td>
+        </tr>
+         <!-- New Graphic Section -->
+    
+               <tr>
+          <td class="body-section" style="font-family: 'Times New Roman', serif; line-height: 1.8; padding: 20px 30px;">
+            <div style="text-align: center; margin: 20px;">
+              <h3 style="margin: 0; padding: 0; font-size: 24px; font-weight: bold; margin-bottom: 10px;">Partisan Breakdown</h3>
+              <p style="
+          background-color: #f9f9f9; 
+          border-left: 4px solid red; 
+          border-right: 4px solid red; 
+          padding: 10px; 
+          font-size: 17px; 
+          margin-top: 20px;
+        ">
+          🐘 Republicans: <b>94.5%</b> Yea, <b>0.0%</b> Nay
+          <span style="color:green; font-weight: bold;">
+          </span>
+        </p>
+        <p style="
+        background-color: #f9f9f9; 
+        border-left: 4px solid blue; 
+        border-right: 4px solid blue; 
+        padding: 10px; 
+        font-size: 17px; 
+        margin-top: 20px;
+      ">
+        🐴 Democrats: <b>93.0%</b> Yea, <b>0.0%</b> Nay
+        <span style="color:green; font-weight: bold;">
+        </span>
+      </p>
+            </div>
+    </td></tr><tr>
+      <td style="padding: 0;">
+        <div style="height: 5px; background-color: #f5f5f5; line-height: 5px; font-size: 1px;">&nbsp;</div>
+      </td>
+    </tr>
+    
+    
+        
+    
+        <!-- Single Bill Section -->
+        <tr>
+          <td class="body-section" style="font-family: 'Times New Roman', serif; line-height: 1.8; padding: 20px 30px;">
+            <h3 style="margin: 0; padding: 0; font-size: 20px; text-decoration: underline; font-weight: bold;">Small Business Advocacy Improvements Act of 2025 Summary:</h3>
+            <ul class="bill-summary" style="margin: 10px 0;">
+              <li style="font-size: 17px; line-height: 1.8; margin: 0 0 10px 0;">Clarifies the Office of Advocacy’s role to include the international economy when supporting small businesses. (Office of Advocacy: Acts as an independent voice for small businesses, collects data, and influences regulatory policy in the Federal Government.)</li>
+              <li style="font-size: 17px; line-height: 1.8; margin: 0 0 10px 0;">Fixes wording in the Government's definition of the primary functions of the Office of Advocacy.</li>
+              <li style="font-size: 17px; line-height: 1.8; margin: 0 0 10px 0;">Expands authority for the SBA (Small Business Administration) to represent small firms in foreign government and global trade discussions.</li>
+           </ul>
+            <h3 style="margin: 0; padding: 0; font-size: 20px; text-decoration: underline; font-weight: bold;">"Pork"</h3>
+            <ul class="bill-summary" style="margin: 10px 0;">
+              <li style="font-size: 17px; line-height: 1.8; margin: 0 0 10px 0;">No pork in this bill.</li>
+            </ul>
+    
+            <p style="line-height: 1.8; padding: 0; font-size: 20px; margin: 0; color: #000; text-decoration: none; margin-top: 20px;" "="">
+              Rep. &lt;&lt; Test Representative &gt;&gt;
+              voted: <span>&lt;&lt; Test REPVOTE2 &gt;&gt;</span>. House Result: <span style="color:green">Passed</span>
+            </p>
+          </td>
+        </tr>
+         <!-- New Graphic Section -->
+    
+               <tr>
+          <td class="body-section" style="font-family: 'Times New Roman', serif; line-height: 1.8; padding: 20px 30px;">
+            <div style="text-align: center; margin: 20px;">
+              <h3 style="margin: 0; padding: 0; font-size: 24px; font-weight: bold; margin-bottom: 10px;">Partisan Breakdown</h3>
+              <p style="
+          background-color: #f9f9f9; 
+          border-left: 4px solid red; 
+          border-right: 4px solid red; 
+          padding: 10px; 
+          font-size: 17px; 
+          margin-top: 20px;
+        ">
+          🐘 Republicans: <b>88.9%</b> Yea, <b>6.9%</b> Nay
+          <span style="color:green; font-weight: bold;">
+          </span>
+        </p>
+        <p style="
+        background-color: #f9f9f9; 
+        border-left: 4px solid blue; 
+        border-right: 4px solid blue; 
+        padding: 10px; 
+        font-size: 17px; 
+        margin-top: 20px;
+      ">
+        🐴 Democrats: <b>94.4%</b> Yea, <b>0.0%</b> Nay
+        <span style="color:green; font-weight: bold;">
+        </span>
+      </p>
+            </div>
+    </td></tr><tr>
+      <td style="padding: 0;">
+        <div style="height: 5px; background-color: #f5f5f5; line-height: 5px; font-size: 1px;">&nbsp;</div>
+      </td>
+    </tr>
+    
+    
+        
+    
+        <!-- Single Bill Section -->
+        <tr>
+          <td class="body-section" style="font-family: 'Times New Roman', serif; line-height: 1.8; padding: 20px 30px;">
+            <h3 style="margin: 0; padding: 0; font-size: 20px; text-decoration: underline; font-weight: bold;">SPUR Act Summary:</h3>
+            <ul class="bill-summary" style="margin: 10px 0;">
+              <li style="font-size: 17px; line-height: 1.8; margin: 0 0 10px 0;">Expands the SBA “scorecard”—a tool measuring how federal agencies meet small business contracting goals—to track new small businesses that have never had a prime contract (direct contract with the government).</li>
+              <li style="font-size: 17px; line-height: 1.8; margin: 0 0 10px 0;">Requires data on contracts awarded to service-disabled veteran-owned, socially/economically disadvantaged, women-owned, and HUBZone (Historically Underutilized Business Zone) firms.</li>
+              <li style="font-size: 17px; line-height: 1.8; margin: 0 0 10px 0;">Maintains budget neutrality under CUTGO (“Cut As You Go”), meaning no new funding is authorized and any new costs must be offset by cuts elsewhere.</li>
+           </ul>
+            <h3 style="margin: 0; padding: 0; font-size: 20px; text-decoration: underline; font-weight: bold;">"Pork"</h3>
+            <ul class="bill-summary" style="margin: 10px 0;">
+              <li style="font-size: 17px; line-height: 1.8; margin: 0 0 10px 0;">No pork in this bill.</li>
+            </ul>
+    
+            <p style="line-height: 1.8; padding: 0; font-size: 20px; margin: 0; color: #000; text-decoration: none; margin-top: 20px;" "="">
+              Rep. &lt;&lt; Test Representative &gt;&gt;
+              voted: <span>&lt;&lt; Test REPVOTE3 &gt;&gt;</span>. House Result: <span style="color:green">Passed</span>
+            </p>
+          </td>
+        </tr>
+         <!-- New Graphic Section -->
+    
+               <tr>
+          <td class="body-section" style="font-family: 'Times New Roman', serif; line-height: 1.8; padding: 20px 30px;">
+            <div style="text-align: center; margin: 20px;">
+              <h3 style="margin: 0; padding: 0; font-size: 24px; font-weight: bold; margin-bottom: 10px;">Partisan Breakdown</h3>
+              <p style="
+          background-color: #f9f9f9; 
+          border-left: 4px solid red; 
+          border-right: 4px solid red; 
+          padding: 10px; 
+          font-size: 17px; 
+          margin-top: 20px;
+        ">
+          🐘 Republicans: <b>83.4%</b> Yea, <b>11.5%</b> Nay
+          <span style="color:green; font-weight: bold;">
+          </span>
+        </p>
+        <p style="
+        background-color: #f9f9f9; 
+        border-left: 4px solid blue; 
+        border-right: 4px solid blue; 
+        padding: 10px; 
+        font-size: 17px; 
+        margin-top: 20px;
+      ">
+        🐴 Democrats: <b>94.4%</b> Yea, <b>0.0%</b> Nay
+        <span style="color:green; font-weight: bold;">
+        </span>
+      </p>
+            </div>
+    </td></tr><tr>
+      <td style="padding: 0;">
+        <div style="height: 5px; background-color: #f5f5f5; line-height: 5px; font-size: 1px;">&nbsp;</div>
+      </td>
+    </tr>
+    
+    
+                        <!-- FOOTER / SIGNUP SECTION -->
+    
+                <tr>
+      <td class="body-section" style="font-family: 'Times New Roman', serif; line-height: 1.8; padding: 20px 30px;">
+          <div style="font-size: 17px; line-height: 1.8; margin: 0 0 10px 0; text-align: center; font-style:italic;">Thank you for reading RepReport! Please help friends and family get in the know by forwarding them this email, or having them sign up <a href="https://repreport.org" style="color:blue !important;">here</a>.</div>
+      </td>
+    </tr>
+    
+    <tr>
+      <td style="padding: 0;">
+        <div style="height: 5px; background-color: #f5f5f5; line-height: 5px; font-size: 1px;">&nbsp;</div>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="body-section" style="font-family: 'Times New Roman', serif; line-height: 1.8; padding: 20px 30px;">
+        <div style="font-size: 17px; line-height: 1.8; margin: 0 0 10px 0; text-align: center; font-style:italic;">If you have feedback for us, please feel free to provide it <a href="https://forms.gle/eJ1V4UiTmZM9r58d6" style="color:blue !important;">here</a>.</div>
+      </td>
+    </tr>
+    
+    <tr>
+    <td style="padding: 0;">
+    <div style="height: 5px; background-color: #f5f5f5; line-height: 5px; font-size: 1px;">&nbsp;</div>
+    </td>
+    </tr>
+                <tr>
+                  <td class="body-section" style="font-family: 'Times New Roman', serif; line-height: 1.8; padding: 20px 30px; text-align: center;" align="center">
+                    <p style="line-height: 1.8; padding: 0; margin: 0; text-decoration: none; text-align: center; margin-top: 20px; font-size: 14px; color: black;">
+      Forwarded this? <a href="https://repreport.org/" style="text-decoration: underline; color: #007bff; font-weight: bold;">Sign Up Here</a>
+    </p>
+    <p style="line-height: 1.8; padding: 0; margin: 0; text-decoration: none; text-align: center; font-size: 14px; color: black;">
+      <a href="https://repreport.org/" style="text-decoration: none; color: #000;">https://repreport.org/</a>
+    </p>
+    
+                  </td>
+                </tr>
+                <tr>
+                  <td class="footer" style="text-align: center; font-size: 14px; color: #666666; padding: 10px;" align="center">
+                    &copy; 2025 RepReport. All rights reserved.
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+                    <center>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <table border="0" cellpadding="0" cellspacing="0" width="100%" id="canspamBarWrapper" style="background-color:#FFFFFF; border-top:1px solid #E5E5E5;">
+                        <tr>
+                            <td align="center" valign="top" style="padding-top:20px; padding-bottom:20px;">
+                                <table border="0" cellpadding="0" cellspacing="0" id="canspamBar">
+                                    <tr>
+                                        <td align="center" valign="top" style="color:#606060; font-family:Helvetica, Arial, sans-serif; font-size:11px; line-height:150%; padding-right:20px; padding-bottom:5px; padding-left:20px; text-align:center;">
+                                            This email was sent to <a href="mailto:&lt;&lt; Test Email Address &gt;&gt;" target="_blank" style="color:#404040 !important;">&lt;&lt; Test Email Address &gt;&gt;</a>
+                                            <br>
+                                            <a href="https://repreport.us17.list-manage.com/about?u=4c0f3950dc0f76487d3277a17&id=52679f637a&e=[UNIQID]&c=e5f6c68e9e" target="_blank" style="color:#404040 !important;"><em>why did I get this?</em></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://repreport.us17.list-manage.com/unsubscribe?u=4c0f3950dc0f76487d3277a17&id=52679f637a&t=b&e=[UNIQID]&c=e5f6c68e9e" style="color:#404040 !important;">unsubscribe from this list</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://repreport.us17.list-manage.com/profile?u=4c0f3950dc0f76487d3277a17&id=52679f637a&e=[UNIQID]&c=e5f6c68e9e" style="color:#404040 !important;">update subscription preferences</a>
+                                            <br>
+                                            RepReport &middot; 9169 W State St #3391 &middot; Garden City, ID 83714 &middot; USA
+                                            <br>
+                                            <br>
+                                            
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                    <style type="text/css">
+                        @media only screen and (max-width: 480px){
+                            table#canspamBar td{font-size:14px !important;}
+                            table#canspamBar td a{display:block !important; margin-top:10px !important;}
+                        }
+                    </style>
+                </center></body>
+    </html>`,
+  },
   "midnight-agent-raul-gonzalez-acts":{
     title:"Midnight Rules Relief and Agent Raul Gonzalez Officer Safety Acts",
     bills: [
