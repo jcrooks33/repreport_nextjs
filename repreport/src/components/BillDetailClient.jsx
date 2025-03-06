@@ -148,7 +148,7 @@ export default function BillDetailClient({ title, bps, pork, tableData, tweets, 
   // Render tweets (statements)
   const renderTweets = () => {
     if (!tweets || !tweets.length) {
-      return <p>No statements available.</p>;
+      return <p>No tweets available.</p>;
     }
     
     return (
@@ -189,7 +189,7 @@ export default function BillDetailClient({ title, bps, pork, tableData, tweets, 
                 </div>
               ))
             ) : (
-              <p className={styles.noResults}>No statements available from {activePartyFilter} representatives</p>
+              <p className={styles.noResults}>No tweets available from {activePartyFilter} representatives</p>
             )}
           </div>
         </div>

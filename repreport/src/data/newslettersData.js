@@ -5,7 +5,7 @@ export const newsletterData = {
     title:"Midnight Rules Relief and Agent Raul Gonzalez Officer Safety Acts",
     bills: [
       {
-        id: "midnight-act",
+        id: "midnight-rules",
         title: "Midnight Rules Relief Act",
         csv: "/data/midnight-act.csv",
         tweets: [
@@ -13,7 +13,7 @@ export const newsletterData = {
         ]
       },
       {
-        id: "agent-act",
+        id: "agent-raul-gonzalez-act",
         title: "Agent Raul Gonzalez Officer Safety Act",
         csv: "/data/agent-act.csv",
         tweets: [
