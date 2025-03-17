@@ -308,12 +308,6 @@ function MobileTabs({ table, tweets, articles }) {
     <div>
       <div className={styles.tabBar}>
         <button
-          className={activeTab === 'summary' ? styles.activeTab : ''}
-          onClick={() => setActiveTab('summary')}
-        >
-          Summary
-        </button>
-        <button
           className={activeTab === 'statements' ? styles.activeTab : ''}
           onClick={() => setActiveTab('statements')}
         >
