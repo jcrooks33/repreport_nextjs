@@ -181,12 +181,16 @@ export default function BillDetailClient({ title, bps, pork, tableData, tweets, 
           </button>
         </div>
         <div className={styles.tweetsContainer}>
-          <div className={styles.tweetsGrid}>
+          <div className={`${styles.tweetsGrid} ${isMobile ? styles.tweetsMobileGrid : ''}`}>
             {filteredTweets.length > 0 ? (
               filteredTweets.map((tweet, idx) => (
-                <div key={idx} className={styles.tweetCard}>
-                  <Tweet id={tweet.id} />
-                </div>
+                isMobile ? (
+                  <Tweet key={idx} id={tweet.id} />
+                ) : (
+                  <div key={idx} className={styles.tweetCard}>
+                    <Tweet id={tweet.id} />
+                  </div>
+                )
               ))
             ) : (
               <p className={styles.noResults}>No tweets available from {activePartyFilter} representatives</p>
@@ -266,6 +270,7 @@ export default function BillDetailClient({ title, bps, pork, tableData, tweets, 
         {renderSummary()}
         
         <MobileTabs 
+          summary={renderSummary()}
           table={renderTable()} 
           tweets={renderTweets()} 
           articles={renderArticles()} 
@@ -300,34 +305,33 @@ export default function BillDetailClient({ title, bps, pork, tableData, tweets, 
   );
 }
 
-// Simple tabbed interface for mobile
-function MobileTabs({ table, tweets, articles }) {
-  const [activeTab, setActiveTab] = useState('summary');
+// Improved tabbed interface for mobile
+function MobileTabs({ summary, table, tweets, articles }) {
+  const [activeTab, setActiveTab] = useState('statements');
 
   return (
-    <div>
+    <div className={styles.mobileTabsContainer}>
       <div className={styles.tabBar}>
         <button
-          className={activeTab === 'statements' ? styles.activeTab : ''}
+          className={`${styles.tabButton} ${activeTab === 'statements' ? styles.activeTab : ''}`}
           onClick={() => setActiveTab('statements')}
         >
           Statements
         </button>
         <button
-          className={activeTab === 'voting' ? styles.activeTab : ''}
+          className={`${styles.tabButton} ${activeTab === 'voting' ? styles.activeTab : ''}`}
           onClick={() => setActiveTab('voting')}
         >
           Voting
         </button>
         <button
-          className={activeTab === 'articles' ? styles.activeTab : ''}
+          className={`${styles.tabButton} ${activeTab === 'articles' ? styles.activeTab : ''}`}
           onClick={() => setActiveTab('articles')}
         >
           Articles
         </button>
       </div>
       <div className={styles.tabContent}>
-        {activeTab === 'summary' && <div className={styles.mobileSection}>{tweets}</div>}
         {activeTab === 'statements' && <div className={styles.mobileSection}>{tweets}</div>}
         {activeTab === 'voting' && <div className={styles.mobileSection}>{table}</div>}
         {activeTab === 'articles' && <div className={styles.mobileSection}>{articles}</div>}

@@ -86,6 +86,14 @@
   display: flex;
   margin-bottom: 1.5rem;
   border-bottom: 1px solid #e0e0e0;
+  overflow-x: auto; /* Enable horizontal scrolling for mobile */
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+  scrollbar-width: none; /* Hide scrollbar for Firefox */
+  -ms-overflow-style: none; /* Hide scrollbar for IE and Edge */
+}
+
+.filterTabs::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for Chrome, Safari and Opera */
 }
 
 .filterTab {
@@ -96,6 +104,8 @@
   cursor: pointer;
   transition: all 0.2s ease;
   color: #555;
+  white-space: nowrap; /* Prevent text wrapping */
+  flex-shrink: 0; /* Prevent tabs from shrinking */
 }
 
 .activeFilterTab {
@@ -104,18 +114,23 @@
   font-weight: 500;
 }
 
-/* Tweets Container with fixed height and scrolling */
+/* Tweets Container with responsive height */
 .tweetsContainer {
-  height: 500px; /* Fixed height for the tweets section */
+  height: 500px; /* Default height for desktop */
   overflow-y: auto; /* Enable vertical scrolling */
   padding-right: 0.5rem; /* Add some padding for the scrollbar */
 }
 
 .tweetsGrid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 columns */
-  grid-template-rows: repeat(2, auto); /* 2 rows initially visible */
+  grid-template-columns: repeat(3, 1fr); /* 3 columns for desktop */
   gap: 1.5rem;
+}
+
+/* Mobile specific grid for tweets */
+.tweetsMobileGrid {
+  grid-template-columns: 1fr; /* Single column for mobile */
+  gap: 2rem; /* Increased spacing between tweets */
 }
 
 .tweetCard {
@@ -123,16 +138,20 @@
   border-radius: 8px;
   padding: 1rem;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-  /* Set a max width to ensure consistent sizing */
   max-width: 100%;
-  /* Ensure tweet content doesn't overflow */
   overflow: hidden;
+  width: 100%; /* Ensure full width on mobile */
 }
 
 /* Ensure Tweet embeds fit within cards */
 .tweetCard :global(.react-tweet) {
   max-width: 100% !important;
   width: 100% !important;
+}
+
+/* Mobile Tabs Container */
+.mobileTabsContainer {
+  margin-bottom: 2rem;
 }
 
 /* Two Column Layout */
@@ -344,17 +363,25 @@
   border-bottom: 1px solid #ddd;
   margin-bottom: 1rem;
   overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
-.tabBar button {
+.tabBar::-webkit-scrollbar {
+  display: none;
+}
+
+.tabButton {
   flex: 1;
-  padding: 0.75rem;
+  padding: 0.75rem 1rem;
   background: none;
   border: none;
   cursor: pointer;
   font-size: 0.9rem;
-  transition: background-color 0.2s ease;
   white-space: nowrap;
+  min-width: 80px; /* Ensure minimum width */
+  text-align: center;
 }
 
 .activeTab {
@@ -373,6 +400,12 @@
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
+.noResults {
+  padding: 1rem;
+  text-align: center;
+  color: #666;
+}
+
 /* Responsive adjustments */
 @media (max-width: 992px) {
   .tweetsGrid {
@@ -381,6 +414,18 @@
 }
 
 @media (max-width: 768px) {
+  .container, .containerMobile {
+    padding: 1rem;
+  }
+
+  .summaryCard {
+    padding: 1.5rem;
+  }
+
+  .summaryCard h1 {
+    font-size: 1.75rem;
+  }
+
   .tweetsGrid, .articlesGrid {
     grid-template-columns: 1fr;
   }
@@ -394,12 +439,35 @@
     flex-direction: column;
   }
   
+  .statementsSection {
+    padding: 1.5rem;
+  }
+
   .tweetsContainer {
-    height: 400px; /* Slightly smaller height on smaller screens */
+    height: auto; /* Remove fixed height on mobile */
+    max-height: none; /* No max height on mobile to allow natural flow */
+    padding: 0; /* Remove padding that was used for scrollbar */
+  }
+
+  /* Improve spacing around tweet elements on mobile */
+  .tweetsGrid > :global(.react-tweet) {
+    margin-bottom: 1.5rem;
   }
 
   .tableScrollWrapper, 
   .articlesContainer {
     max-height: 400px;
+  }
+
+  /* Adjust padding for mobile */
+  .filterTab {
+    padding: 0.75rem 1rem;
+  }
+
+  /* Remove backgrounds and shadows for mobile tweet displays */
+  .mobileSection .statementsSection {
+    background: transparent;
+    box-shadow: none;
+    padding: 0;
   }
 }
