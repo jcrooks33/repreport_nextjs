@@ -9,6 +9,42 @@ import WhyRepReport from '@/components/WhyRepReport';
 // Just an example array of objects – in reality, you might fetch this from a server
 const newsletterData = [
   {
+    slug: 'research-security-accountability-DHS-act',
+    title: 'Research Security and Accountability in DHS Act',
+    date: '3/10/25',
+  },
+          {
+    slug: 'pandemic-unemployment-fraud-enforcement-act',
+    title: 'Pandemic Unemployment Fraud Enforcement Act',
+    date: '3/11/25',
+          },
+    {
+    slug: 'full-year-cont-approp-ext-act-2025',
+    title: 'Full-Year Continuing Appropriations and Extensions Act, 2025',
+    date: '3/11/25',
+    },
+    {
+    slug: 'emerging-innovative-border-tech-act',
+    title: 'Emerging Innovative Border Technologies Act',
+    date: '3/10/25',
+    },
+      {
+    slug: 'censuring-rep-al-greene',
+    title: 'Censuring Representative Al Green of Texas',
+    date: '3/6/25',
+  },
+  {
+    slug: 'mail-traffic-deaths-reporting-act',
+    title: 'Mail Traffic Deaths Reporting Act of 2025',
+    date: '3/3/25',
+  },
+    {
+    slug: 'safe-and-smart-fed-purchasing-act',
+    title: 'Safe and Smart Federal Purchasing Act',
+    date: '3/3/25',
+  },
+
+  {
     slug: 'doe-sba-rural-medal-budget-acts',
     title: 'DOE and SBA Research, Rural Small Business Resilience, Medal of Honor, and 2025 Congressional Budget Acts',
     date: '2/27/25',

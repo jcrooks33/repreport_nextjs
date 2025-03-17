@@ -1,6 +1,165 @@
 // src/data/billsData.js
 export const billsData = [
   {
+    slug: 'sub-border-defense-act',
+    title: 'Subterranean Border Defense Act',
+    bps:[
+      'Requires annual reports on countering illegal cross-border tunnels (underground routes used for smuggling).',
+      'Expands the 2023 NDAA (National Defense Authorization Act) to include yearly strategy updates.',
+      'Ensures ongoing oversight of border security operations.',
+      'No pork in this bill.',
+    ],
+    tweets: [
+    ],
+    csv: "/data/subborder.csv",
+    articles: [
+    ],
+    passed: "Passed",
+    date: 'March 10, 2025',
+    tags: ['Homeland Security'],
+    sponsor: 'Bipartisan',
+  },
+  {
+    slug: 'research-security-accountability-DHS-act',
+    title: 'Research Security and Accountability in DHS Act',
+    bps:[
+      'Mandates a DHS-wide (Department of Homeland Security) policy to protect research and development (R&D) from unauthorized disclosure, ensuring sensitive info remains secure.',
+      'Directs the Government Accountability Office (GAO) to review DHS compliance with NSPM-33 (National Security Presidential Memorandum-33), used to standardize research security.',
+      'Requires updates to Congress on DHS safeguards and processes for securing R&D acquisitions.',
+      'No pork in this bill.',
+    ],
+    tweets: [
+    ],
+    csv: "/data/researchDHS.csv",
+    articles: [
+    ],
+    passed: "Passed",
+    date: 'March 10, 2025',
+    tags: ['Homeland Security'],
+    sponsor: 'Republican',
+  },
+  {
+    slug: 'pandemic-unemployment-fraud-enforcement-act',
+    title: 'Pandemic Unemployment Fraud Enforcement Act',
+    bps:[
+      'Extends the time limit for fraud prosecutions under unemployment programs from the CARES Act (Coronavirus Aid, Relief, and Economic Security Act) to 10 years.',
+      'Restricts new legal actions to those with unexpired statutes of limitations on or after this Act’s enactment.',
+      'Rescinds $5 million in unused CARES Act funds to cover costs.',
+      'No pork in this bill.',
+    ],
+    tweets: [
+    ],
+    csv: "/data/pandemicfraud.csv",
+    articles: [
+    ],
+    passed: "Passed",
+    date: 'March 11, 2025',
+    tags: ['Ways and Means'],
+    sponsor: 'Republican',
+  },
+        {
+    slug: 'full-year-cont-approp-ext-act-2025',
+    title: 'Full-Year Continuing Appropriations and Extensions Act, 2025',
+    bps:[
+      'Continues federal funding for fiscal year (FY) 2025, preventing a shutdown and ensuring government operations.',
+      'Extends and modifies Medicare, Medicaid, and other health measures (including telehealth).',
+      'Maintains support for multiple agencies, adjusting allocations for defense, infrastructure, and social services.',
+      'Allocates funds for the Sites Reservoir Project, a localized water-storage initiative in California.',
+      'Provides financing for the El Paso Aquifer Storage and Recovery Enhanced Arroyo Project, focused on Texas water supply.',
+      'Advances the Replenish Big Bear Project, improving water reuse in Big Bear, California.',
+      'Promotes the Purified Water Replenishment Project for a specific local area.',
+      'Adds support for the North San Diego Water Reuse Coalition’s regional water program.',
+      'Boosts the Coachella Valley WRP-10 Non-Potable System Expansion, targeting local water services.',
+      'Backs Pure Water Oceanside Phase 1, a city-level water purification effort.',
+      'Enhances the Carpinteria Advanced Purification Project, a localized infrastructure plan.',
+    ],
+    tweets: [
+    ],
+    csv: "/data/cont2025.csv",
+    articles: [
+    ],
+    passed: "Passed",
+    date: 'March 11, 2025',
+    tags: ['Appropriations','Budget'],
+    sponsor: 'Republican',
+  },
+    {
+    slug: 'emerging-innovative-border-tech-act',
+    title: 'Emerging Innovative Border Technologies Act',
+    bps:[
+      'Outlines a DHS (Department of Homeland Security) plan for advanced border security tech (AI: artificial intelligence, LIDAR: light-based distance measuring).',
+      'Instructs CBP (Customs and Border Protection) Innovation Teams to test and adopt emerging tools to address capability gaps.',
+      'Requires yearly updates to Congress on progress, privacy impacts, and potential expansions.',
+      'No pork in this bill.',
+    ],
+    tweets: [
+    ],
+    csv: "/data/bordertech.csv",
+    articles: [
+    ],
+    passed: "Passed",
+    date: 'March 10, 2025',
+    tags: ['Homeland Security'],
+    sponsor: 'Bipartisan',
+  },
+  {
+    slug: 'censuring-rep-al-greene',
+    title: 'Censuring Representative Al Green of Texas',
+    bps:[
+      'Censures Representative Al Green for repeated disruptions during the President’s joint address to Congress.',
+      'Requires him to stand in the House well (the area in front of the Speaker’s podium) for formal censure (official condemnation).',
+      'Mandates a public reading of this resolution by the Speaker to finalize the reprimand.',
+      'No pork in this bill.',
+    ],
+    tweets: [
+    ],
+    csv: "/data/algreene.csv",
+    articles: [
+    ],
+    passed: "Passed",
+    date: 'March 6, 2025',
+    tags: ['Ethics'],
+    sponsor: 'Republican',
+  },
+  {
+    slug: 'mail-traffic-deaths-reporting-act',
+    title: 'Mail Traffic Deaths Reporting Act of 2025',
+    bps:[
+      'Requires USPS (United States Postal Service) staff and contractors to report mail-vehicle crashes with injuries or deaths within three days.',
+      'Creates an internal database and annual public report detailing these incidents.',
+      'Imposes penalties for non-reporting, including fines or contract termination.',
+      'No pork in this bill.',
+    ],
+    tweets: [
+    ],
+    csv: "/data/mail.csv",
+    articles: [
+    ],
+    passed: "Passed",
+    date: 'March 3, 2025',
+    tags: ['Oversight and Government Reform'],
+    sponsor: 'Bipartisan',
+  },
+{
+    slug: 'safe-and-smart-fed-purchasing-act',
+    title: 'Safe and Smart Federal Purchasing Act',
+    bps:[
+      'Directs the OMB (Office of Management and Budget) to examine if awarding contracts based on the Lowest Price Technically Acceptable (LPTA) method poses national security risks.',
+      'Requires a final report to be delivered to Congress within 180 days.',
+      'Ensures both Defense and Civilian agencies are included in this review.',
+      'No pork in this bill.',
+    ],
+    tweets: [
+    ],
+    csv: "/data/purch.csv",
+    articles: [
+    ],
+    passed: "Passed",
+    date: 'March 3, 2025',
+    tags: ['Oversight and Government Reform'],
+    sponsor: 'Bipartisan',
+  },
+  {
     slug: '2025-congressional-budget',
     title: '2025 Congressional Budget',
     bps:[
