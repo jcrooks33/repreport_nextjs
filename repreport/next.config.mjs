@@ -4,8 +4,8 @@ const nextConfig = {
     images: {
       unoptimized: true, // Disable image optimization for static export
     },
-    assetPrefix: process.env.NODE_ENV === 'production' ? '/repreport_nextjs/' : '',
-    basePath: process.env.NODE_ENV === 'production' ? '/repreport_nextjs' : '',
+    assetPrefix: process.env.NODE_ENV === '' ? '' : '',
+    basePath: process.env.NODE_ENV === '' ? '' : '',
   };
   
   export default nextConfig;
