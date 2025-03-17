@@ -48,6 +48,22 @@ export const billsData = [
       'No pork in this bill.',
     ],
     tweets: [
+      { 
+        id: "1899266365246062775", 
+        party: "Republican" 
+       },
+       { 
+        id: "1899864654895050785", 
+        party: "Republican" 
+       },
+      { 
+        id: "1899815488265363647", 
+        party: "Republican" 
+       },
+       { 
+        id: "1899942980242579827", 
+        party: "Republican" 
+       }
     ],
     csv: "/data/pandemicfraud.csv",
     articles: [
@@ -93,6 +109,18 @@ export const billsData = [
       'No pork in this bill.',
     ],
     tweets: [
+      { 
+        id: "1778076569468092450", 
+        party: "Republican" 
+       },
+       { 
+        id: "1899310856963338536", 
+        party: "Republican" 
+       },
+       { 
+        id: "1838318002233598288", 
+        party: "Republican" 
+       },
     ],
     csv: "/data/bordertech.csv",
     articles: [
@@ -300,6 +328,18 @@ export const billsData = [
       'No pork in this bill.',
     ],
     tweets: [
+      { 
+        id: "1889789179044708501", 
+        party: "Republican" 
+       },
+      { 
+        id: "1890033075079258272", 
+        party: "Republican" 
+       },
+      { 
+        id: "1889799048984662226", 
+        party: "Republican" 
+       }
     ],
     csv: "/data/midnight.csv",
     articles: [
