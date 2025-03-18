@@ -201,7 +201,6 @@ export default function BillDetailClient({ title, bps, pork, tableData, tweets, 
     );
   };
 
-  // Render articles
   const renderArticles = () => {
     return (
       <div className={styles.articlesSection}>
@@ -210,22 +209,14 @@ export default function BillDetailClient({ title, bps, pork, tableData, tweets, 
         <div className={styles.articlesContainer}>
           {articles && articles.length ? (
             <div className={styles.articlesGrid}>
-              {articles.map((link, index) => (
+              {articles.map((article, index) => (
                 <div key={index} className={styles.articleCard}>
-                  <div className={styles.articleImagePlaceholder}></div>
-                  <h3 className={styles.articleTitle}>
-                    {link.includes('passes') ? 'Infrastructure Bill Passes House After Months of Negotiation' : 
-                     "What's Actually in the Infrastructure Bill? A Breakdown"}
-                  </h3>
-                  <p className={styles.articleSource}>
-                    {link.includes('passes') ? 'National News • May 16, 2023' : 'Policy Today • May 17, 2023'}
-                  </p>
-                  <p className={styles.articleExcerpt}>
-                    {link.includes('passes') ? 'After months of intense debate, the House passed the Comprehensive...' : 
-                     'We analyze the key components of the 2,700-page infrastructure bill and...'}
-                  </p>
+
+                  <h3 className={styles.articleTitle}>{article.title}</h3>
+                  <p className={styles.articleSource}>{article.source} • {article.date}</p>
+                  <p className={styles.articleExcerpt}>{article.excerpt}</p>
                   <a 
-                    href={link} 
+                    href={article.url} 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className={styles.readMoreLink}

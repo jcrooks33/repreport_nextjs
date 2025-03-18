@@ -12,8 +12,15 @@ export const billsData = [
     tweets: [
     ],
     csv: "/data/subborder.csv",
-    articles: [
-    ],
+    articles: [ 
+      {
+    url: 'https://www.foxnews.com/politics/rashida-tlaib-against-bill-cracking-down-mexican-cartels-border-tunnel-system',
+    title: 'Rep. Tlaib Votes Against Bill Targeting Cartel Border Tunnels',
+    source: 'Fox News',
+    date: 'March 10, 2025',
+    excerpt: 'Rashida Tlaib becomes lone House lawmaker opposing cracking down on Mexican cartels border tunnel system...',
+      },
+  ],
     passed: "Passed",
     date: 'March 10, 2025',
     tags: ['Homeland Security'],
@@ -92,8 +99,22 @@ export const billsData = [
     tweets: [
     ],
     csv: "/data/cont2025.csv",
-    articles: [
-    ],
+    articles: [ 
+      {
+    url: 'https://www.foxnews.com/politics/rashida-tlaib-against-bill-cracking-down-mexican-cartels-border-tunnel-system',
+    title: 'What we know about the GOP government funding bill',
+    source: 'CNN',
+    date: 'March 14, 2025',
+    excerpt: 'Congress has approved a stopgap bill to fund the federal government through September 30 and avert...',
+      },
+      {
+        url: 'https://www.reuters.com/world/us/us-house-tees-up-close-vote-government-funding-face-democratic-opposition-2025-03-11/',
+        title: 'US House Republicans pass stopgap bill to fund government',
+        source: 'Reuters',
+        date: 'March 12, 2025',
+        excerpt: 'The Republican-controlled U.S. House of Representatives on Tuesday passed a stopgap bill to...',
+          },
+  ],
     passed: "Passed",
     date: 'March 11, 2025',
     tags: ['Appropriations','Budget'],
