@@ -27,7 +27,7 @@ const representatives = {
     { label: "Stanton, Greg", value: "Stanton" },
     { label: "Biggs, Andy", value: "Biggs (AZ)" },
     { label: "Ciscomani, Juan", value: "Ciscomani" },
-    { label: "Grijalva, Raul", value: "Grijalva" },
+    { label: "Grijalva, Raul - Vacancy", value: "Grijalva" },
     { label: "Hamadeh, Abraham", value: "Hamadeh (AZ)" },
     { label: "Gosar, Paul", value: "Gosar" }
   ],
