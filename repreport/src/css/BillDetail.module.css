@@ -6,6 +6,11 @@
   background-color: #f9f9f9;
 }
 
+.background {
+  max-width:100%;
+  background-color: #f9f9f9;
+}
+
 .containerMobile {
   margin: 0 auto;
   padding: 1rem;

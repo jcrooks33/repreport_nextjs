@@ -272,6 +272,7 @@ export default function BillDetailClient({ title, bps, pork, tableData, tweets, 
 
   // Desktop view: stacked layout matching the screenshots
   return (
+    <div className={styles.background}>
     <div className={styles.container}>
       <div className={styles.headerSection}>
         <h1 className={styles.siteTitle}>Bill Tracker</h1>
@@ -292,6 +293,7 @@ export default function BillDetailClient({ title, bps, pork, tableData, tweets, 
           {renderArticles()}
         </div>
       </div>
+    </div>
     </div>
   );
 }
