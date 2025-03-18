@@ -470,7 +470,7 @@ const representatives = {
     { label: "De La Cruz, Monica", value: "De La Cruz" },
     { label: "Escobar, Veronica", value: "Escobar" },
     { label: "Sessions, Pete", value: "Sessions" },
-    { label: "Turner, Sylvester", value: "Turner (TX)" },
+    { label: "Turner, Sylvester - Vacancy", value: "Turner (TX)" },
     { label: "Arrington, Jodey", value: "Arrington" },
     { label: "Castro, Joaquin", value: "Castro (TX)" },
     { label: "Roy, Chip", value: "Roy" },
